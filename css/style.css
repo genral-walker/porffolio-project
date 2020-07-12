@@ -1,0 +1,73 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  padding-right: 1rem;
+  font-family: 'DM Sans', sans-serif; }
+
+.side-nav__twitter, .side-nav__linkedin, .side-nav__github {
+  width: 3rem; }
+
+.body {
+  display: grid;
+  grid-template-rows: minmax(min-content, max-content) minmax(90vh, max-content);
+  grid-template-columns: [sidebar-start] minmax(min-content, max-content) [sidebar-end main-start] repeat(8, [center-start] minmax(max-content, 1fr)) [center-end] minmax(4.38rem, max-content) [main-end]; }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  grid-row: 1/ 2;
+  grid-column: center-start / center-end;
+  padding: 3rem 0 1rem;
+  font-size: 1.88rem; }
+  .header__local-host {
+    font-weight: bold; }
+  .header__nav-container {
+    display: inline-block;
+    position: relative;
+    width: 3.13rem;
+    height: 1.5px; }
+  .header__nav {
+    background-color: currentColor;
+    cursor: pointer;
+    transition: all .3s; }
+    .header__nav::after {
+      content: "";
+      position: absolute;
+      visibility: visible;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      margin-top: .7rem;
+      background-color: currentColor; }
+    .header__nav:hover ::after {
+      transform: rotate(90deg); }
+
+.side-nav {
+  grid-row: 1 / -1;
+  grid-column: sidebar-start / sidebar-end;
+  padding: 27vh 1.8rem 0; }
+  .side-nav__icons:not(:last-of-type) {
+    margin-bottom: 5rem; }
+
+main {
+  grid-row: 2 / -1;
+  grid-column: main-start / main-end;
+  display: grid;
+  grid-template-rows: repeat(6, max-content);
+  grid-template-columns: repeat(8, minmax(max-content, 5vw)); }
+  main .intro-section {
+    font-size: 3.8rem;
+    align-items: center;
+    background-color: #12be46;
+    grid-row: 1 / 2;
+    grid-column: 1 / 7; }
+    main .intro-section .red {
+      color: #D03C3C; }
