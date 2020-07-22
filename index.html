@@ -1,48 +1,421 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Portfolio-Project</title>
-</head>
+  </head>
 
-<body class="body">
-
+  <body>
     <section class="header">
-        <p class="header__local-host">Local Host</p>
+      <a class="header__host" href="#">Local Host</a>
 
-        <div class="header__nav-container">
-            <span class="header__nav"></span>
-        </div>
-
+      <div class="header__nav-container">
+        <a href="" class="header__anchor">
+          <span class="header__nav"></span>
+        </a>
+      </div>
     </section>
 
     <aside class="side-nav">
-        <figure class="side-nav__icons">
-            <img src="/assets/images/twitter.svg" class="side-nav__twitter" alt="twitter logo">
-        </figure>
+      <figure class="side-nav__icons">
+        <a href="#" class="side-nav__anchor">
+          <img
+            src="/assets/images/twitter.svg"
+            class="side-nav__twitter"
+            alt="twitter logo"
+          />
+        </a>
+      </figure>
 
-        <figure class="side-nav__icons">
-            <img src="/assets/images/linkedin.svg" class="side-nav__linkedin" alt="linkedin logo">
-        </figure>
+      <figure class="side-nav__icons">
+        <a href="#" class="side-nav__anchor">
+          <img
+            src="/assets/images/linkedin.svg"
+            class="side-nav__linkedin"
+            alt="linkedin logo"
+          />
+        </a>
+      </figure>
 
-        <figure class="side-nav__icons">
-            <img src="/assets/images/github.svg" class="side-nav__github" alt=" github logo">
-        </figure>
+      <figure class="side-nav__icons">
+        <a href="#" class="side-nav__anchor">
+          <img
+            src="/assets/images/github.svg"
+            class="side-nav__github"
+            alt=" github logo"
+          />
+        </a>
+      </figure>
     </aside>
 
-    <main>
+    <section class="intro-section">
+      <p class="intro-section__p">Frontend developer ~ Mentor</p>
 
-        <section class="intro-section">
-            <p class="intro-section__p">Frontend developer ~ Mentor</p>
+      <h1 class="intro-section__h1">
+        Talk is cheap, <br />
+        show me the <span class="red">code</span>
+      </h1>
 
-            <h1 class="intro-section__h1">Talk is cheap, <br> show me the <span class="red">code</span></h1>
+      <p class="intro-section__p-2">
+        Hey There, I’m Micheal a frontend developer based in Delta. My super
+        power is developing products that make you happy.
+      </p>
 
-            <p class="intro-section__p-2">Hey There, I’m Micheal a frontend developer based in Delta. My super power is developing products that make you happy.</p>
-        </section>
+      <div class="intro-section__btn">
+        <a class="intro-section__btn-1" href="#">
+          View my work
+        </a>
+        <a class="intro-section__btn-2" href="#">
+          Hire Me
+        </a>
+      </div>
+    </section>
 
-    </main>
-</body>
+    <section class="story">
+      <div class="story__left">
+        <p class="story__left-p1">Meet Me</p>
+
+        <h2 class="story__left-h2">
+          <span class="story__left-line">
+            My
+          </span>
+          Story
+        </h2>
+
+        <h3 class="story__left-description-1">
+          Brief Desceription
+        </h3>
+
+        <p class="story__left-p2">
+          Just incase you missed the header. I’m Micheal a frontend developer
+          based in Delta, Nigeria. I have 5 years experience in frontend
+          development. When I’m not punching codes on the keyboard, I like to
+          tutor and help upcoming developers in Africa
+        </p>
+
+        <h3 class="story__left-description-2">
+          Education
+        </h3>
+
+        <p class="story__left-p3">
+          I’m a Graduate of Computer science from University of Lagos; Lagos,
+          Nigeria.
+        </p>
+
+        <h3 class="story__left-description-3">
+          Skills
+        </h3>
+
+        <p class="story__left-p-3">
+          I’m proficient with the following technologies, HTML, CSS,
+          JavaScripts, VUE js and react.
+        </p>
+      </div>
+
+      <div class="story__right">
+        <figure class="story__right-images">
+          <img
+            src="/assets/images/blue-shirt-guy.svg"
+            alt="A dev profile"
+            class="profile-image"
+          />
+
+          <img
+            src="/assets/images/Ellipse.svg"
+            alt="eclipse"
+            class="bg-eclipse"
+          />
+        </figure>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="features__words">
+        <p class="features__words-p1">
+          Portfolio
+        </p>
+
+        <h3 class="features__words features__words-h3">
+          <span class="features__words-line">
+            Featured
+          </span>
+          Work
+        </h3>
+      </div>
+
+      <div class="features__box features__box-1">
+        <div class="features__box-words features__box-words-1">
+          <h4 class="features__box-h features__box-h-1">
+            StealThisLook website design
+          </h4>
+          <p class="features__box-p features__box-p-1">
+            Website development for a fashion brand based in Italy
+          </p>
+
+          <a href="#" class="features__box-cta features__box-cta-1">
+            Visit Site
+            <span class="features__box-entity features__box-entity-1"
+              >&rarr;</span
+            >
+          </a>
+        </div>
+
+        <figure class="features__box-images">
+          <img
+            src="/assets/images/lady-with-glasses.jpg"
+            alt="Preview of a lady"
+            class="features__box-img features__box-img-1"
+          />
+        </figure>
+      </div>
+
+      <div class="features__box features__box-2">
+        <div class="features__box-words features__box-words-2">
+          <h4 class="features__box-h features__box-h-2">
+            Bikino website
+          </h4>
+          <p class="features__box-p features__box-p-2">
+            E-commerce site for fashion brand Bikino
+          </p>
+
+          <a href="#" class="features__box-cta features__box-cta-2">
+            Visit Site
+            <span class="features__box-entity features__box-entity-2"
+              >&rarr;</span
+            >
+          </a>
+        </div>
+        <figure class="features__box-images">
+          <img
+            src="/assets/images/lady-shop.jpg"
+            alt="Preview of a lady shopping"
+            class="features__box-img features__box-img-2"
+          />
+        </figure>
+      </div>
+
+      <div class="features__box features__box-3">
+        <div class="features__box-words features__box-words-3">
+          <h4 class="features__box-h features__box-h-3">
+            Paypal website redesign
+          </h4>
+          <p class="features__box-p features__box-p-3">
+            Website development for a fashion brand based in Italy
+          </p>
+
+          <a href="#" class="features__box-cta features__box-cta-3">
+            Visit Site
+            <span class="features__box-entity features__box-entity-3"
+              >&rarr;</span
+            >
+          </a>
+        </div>
+
+        <figure class="features__box-images">
+          <img
+            src="/assets/images/paypal-pix.jpg"
+            alt="Preview of a paypal website"
+            class="features__box-img features__box-img-3"
+          />
+        </figure>
+      </div>
+
+      <div class="features__box features__box-4">
+        <div class="features__box-words features__box-words-4">
+          <h4 class="features__box-h features__box-h-4">
+            Zuri Academy website
+          </h4>
+          <p class="features__box-p features__box-p-4">
+            An online school for beginners to coding
+          </p>
+
+          <a href="#" class="features__box-cta features__box-cta-4">
+            Visit Site
+            <span class="features__box-entity features__box-entity-4"
+              >&rarr;</span
+            >
+          </a>
+        </div>
+
+        <figure class="features__box-images">
+          <img
+            src="/assets/images/zuri.jpg"
+            alt="Preview of another lady"
+            class="features__box-img features__box-img-4"
+          />
+        </figure>
+      </div>
+    </section>
+
+    <section class="articles">
+      <p class="articles__p1">
+        Shalaye
+      </p>
+
+      <h2 class="articles__h2">
+          <span class="articles__h2-line">Arti</span>cles
+      </h2>
+
+      <div class="articles__words">
+        <p class="articles__p articles__p-1">
+          Bem Css; Do’s and Dont’s
+        </p>
+
+        <div class="articles__anchor-container">
+          <a href="#">
+            <span class="articles__arrows"></span>
+          </a>
+        </div>
+      </div>
+
+      <div class="articles__words">
+        <p class="articles__p articles__p-2">
+          Understanding CSS And the mordern web
+        </p>
+
+        <div class="articles__anchor-container">
+          <a href="#">
+            <span class="articles__arrows"></span>
+          </a>
+        </div>
+      </div>
+
+      <div class="articles__words">
+        <p class="articles__p articles__p-3">
+          Dealing with imposter syndrome as a developer
+        </p>
+
+        <div class="articles__anchor-container">
+          <a href="#">
+            <span class="articles__arrows"></span>
+          </a>
+        </div>
+      </div>
+
+      <div class="articles__words">
+        <p class="articles__p articles__p-4">
+          Understanding Template literals in Javascript
+        </p>
+
+        <div class="articles__anchor-container">
+          <a href="#">
+            <span class="articles__arrows"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <form action="" class="form">
+      <p class="form__p form__p-1">
+        Totori me one time
+      </p>
+
+      <h2 class="form__h2">
+          <span class="form__h2-line">Get in</span> touch
+      </h2>
+
+      <div class="form__content">
+        <div class="form__left">
+          <h3 class="form__h3 form__h3-1">
+            Contact Details
+          </h3>
+
+          <p class="form__p form__p-2">
+            maylingw@networksolutions.com <br />
+            <span class="form__p form__p-3">(+234) 135-142-8600</span>
+          </p>
+
+          <h3 class="form__h3 form__h3-2">
+            Social Media
+          </h3>
+
+          <figure>
+            <a href="#" class="form__anchors"
+              ><img
+                src="/assets/images/twitter.svg"
+                alt="twitter profile"
+                class="form__socials form__socials-twitter"
+              />
+            </a>
+            <a href="#" class="form__anchors"
+              ><img
+                src="/assets/images/linkedin.svg"
+                alt="linkedin profile"
+                class="form__socials form__socials-linkedin"
+              />
+            </a>
+            <a href="#" class="form__anchors"
+              ><img
+                src="/assets/images/github.svg"
+                alt="github profile"
+                class="form__socials form__socials-github"
+              />
+            </a>
+          </figure>
+        </div>
+        <div class="form__right">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            required
+            class="form__input form__input-name"
+          />
+
+          <label for="message">Message</label>
+          <textarea
+            name="message"
+            id="message"
+            wrap="soft"
+            required
+            class="form__input form__input-message"
+          ></textarea>
+
+          <input
+            type="submit"
+            value="Send"
+            required
+            class="form__input form__input-submit"
+          />
+        </div>
+      </div>
+    </form>
+
+    <footer class="foot">
+      <p class="foot__p foot__p-1">
+        &copy; Copyright Genral-walker 2020
+      </p>
+
+      <figure>
+        <a href="#" class="foot__anchors"
+          ><img
+            src="/assets/images/twitter.svg"
+            alt="twitter profile"
+            class="foot__socials foot__socials-twitter"
+          />
+        </a>
+        <a href="#" class="foot__anchors"
+          ><img
+            src="/assets/images/linkedin.svg"
+            alt="linkedin profile"
+            class="foot__socials foot__socials-linkedin"
+          />
+        </a>
+        <a href="#" class="foot__anchors"
+          ><img
+            src="/assets/images/github.svg"
+            alt="github profile"
+            class="foot__socials foot__socials-github"
+          />
+        </a>
+      </figure>
+    </footer>
+  </body>
 </html>

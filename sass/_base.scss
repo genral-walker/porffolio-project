@@ -1,16 +1,30 @@
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 html {
-    font-size: 62.5%; //this is 10px.
+  font-size: 62.5%; //this is 10px.
+
+  //////// 900px ///////
+  @media only screen and (max-width: 56.25em) {
+    font-size: 56.25%; //9px
+  }
 }
 
 body {
-    padding-right: 1rem;
-    font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+h3 {
+  font-size: $font-size-md-2;
 }

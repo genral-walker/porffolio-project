@@ -1,0 +1,21 @@
+/////////////////////////////////////
+///////////// PLaceholders.
+
+%icon-set {
+    width: 3rem;
+}    
+
+/// Buttons ///
+    
+%button-set {
+    padding: 1.4rem 2.8rem;
+    border-radius: 5px;
+}    
+
+%h3-set {   
+     margin-bottom: $mg-7;     
+     &:not(:first-of-type){  
+        margin-top: $mg-17;     
+     };                  
+}    
+   
