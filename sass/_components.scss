@@ -12,6 +12,11 @@
     width: 3rem;     
     height: 2px;
 
+      //////// 250px ///////
+  @media only screen and (max-width: 15.625em) {
+    width: 4rem;    
+  }
+
     &::before {
     content: '';
     position: absolute;
@@ -20,6 +25,17 @@
     background-color: inherit; 
     left: 0;
     bottom: .7rem;
+
+     //////// 400px ///////
+  @media only screen and (max-width: 25em) {
+    bottom: .85rem; 
+  }
+
+   //////// 350px ///////
+   @media only screen and (max-width: 21.875em) {
+    bottom: 1rem; 
+  }
+
     }
 
     &::after {
@@ -30,6 +46,17 @@
     background-color: inherit;
     top: .65rem;
     left: 0; 
+
+      //////// 700px ///////
+  @media only screen and (max-width: 43.75em) {
+    top: .75rem; 
+  }
+
+   //////// 350px ///////
+   @media only screen and (max-width: 21.875em) {
+    top: 1rem; 
+  }
+
     } 
   }
 }
@@ -43,11 +70,21 @@
     font-weight: bolder;
     width: max-content; 
 
+      //////// 350px ///////
+      @media only screen and (max-width: 21.875em) {
+        display: flex;
+        flex-direction: column;  
+        font-size: $font-size-md-3;
+        margin-top: 0;
+        padding-top: $mg-12;          
+      } 
+
 
     &-1 {
       @extend %button-set;
       background-color: $color-primary-1;
-      color: white;
+      color: $color-white;
+
     }
 
     &-2 {
@@ -56,6 +93,14 @@
       padding: 1.3rem 4.5rem;
       margin-left: 3rem;
       border: 1px solid $color-primary-1;
+
+      @media only screen and (max-width: 21.875em) {
+        margin-top: $mg-10;   
+      margin-left: 0; 
+      padding-top: 1.84rem;         
+        padding-bottom: 1.84rem;        
+      } 
+
     }
   }
 }
@@ -86,17 +131,17 @@
     display: block;
     height: 100%;
     width: 100%;
-  }
-  &__arrows {
-    display: inline-block;
+  }   
+  &__arrows {   
+    display: inline-block;    
     position: relative;
     background-color: $color-white;
     width: 2rem;
     height: 2px;
-    transform: translateY(-0.6rem);
-    transition: 0.2s;
-
-    &::before {
+    transform: translateY(-0.6rem);      
+    transition: 0.2s;   
+      
+    &::before {   
       position: absolute;
       content: "";
       right: -0.1rem;
@@ -198,7 +243,8 @@
       height: 12rem;
       border-radius: 5px;
       padding-top: 0.7rem;  
-      resize: none;
+      font-family: inherit; 
+      font-size: $font-size-sm-1; 
     }
 
     &-submit {

@@ -2,7 +2,7 @@ body {
   display: grid;
   grid-template-rows: repeat(7, minmax(min-content, max-content));
   grid-template-columns:
-    [sidebar-start] minmax(min-content, max-content) [sidebar-end
+    [sidebar-start] minmax(20px, max-content) [sidebar-end
     main-start] repeat(8, [center-start] minmax(max-content, 1fr))
     [center-end] minmax(4.38rem, max-content) [main-end];
 }
@@ -23,11 +23,11 @@ body {
   }
 
   &__nav-container {
-    margin-left: auto; 
+    margin-left: auto;
   }
 
   &__nav {
-    margin-bottom: .39rem;
+    margin-bottom: 0.39rem;
   }
 }
 
@@ -35,6 +35,11 @@ body {
   grid-row: 1 / 4;
   grid-column: sidebar-start / sidebar-end;
   padding: 27vh 1.8rem 0;
+
+  //////// 500px ///////
+  @media only screen and (max-width: 31.25em) {
+    display: none;
+  }
 
   &__icons {
     &:not(:last-of-type) {
@@ -66,10 +71,25 @@ body {
   justify-content: center;
   padding: 7vh 18vw 12vh;
 
+  //////// 800px ///////
+  @media only screen and (max-width: 50em) {
+    padding: 7vh 5vw 12vh;
+  }
+
+  //////// 300px ///////
+  @media only screen and (max-width: 18.75em) {
+    padding: 7vh 2vw 12vh;
+  }
+
   &__p {
     font-size: $font-size-sm-1;
     font-weight: 500;
     margin-bottom: $mg-3;
+
+    //////// 350px ///////
+    @media only screen and (max-width: 21.875em) {
+      font-size: $font-size-md-3;
+    }
   }
 
   &__h1 {
@@ -80,8 +100,13 @@ body {
     @include space-l;
     margin-top: $mg-8;
     font-size: $font-size-md-2;
-  }
 
+    //////// 350px ///////
+    @media only screen and (max-width: 21.875em) {
+      letter-spacing: 0;
+      padding: 0 1rem;
+    }
+  }
   .red {
     color: $color-primary-1;
   }
@@ -91,15 +116,26 @@ body {
   font-size: $font-size-md-3;
   grid-row: 3 / 4;
   grid-column: center-start / center-end;
-
+  margin-top: 11vw;
   display: flex;
+
+  //////// 350px ///////
+  @media only screen and (max-width: 21.875em) {
+    margin-top: 0;
+  }
 
   &__left {
     flex: 0 0 48%;
 
+    //////// 900px ///////
     @media only screen and (max-width: 56.25em) {
-      flex: 0 0 45%; 
-        }
+      flex: 0 0 45%;
+    }
+
+           //////// 800px ///////
+  @media only screen and (max-width: 50em) {
+    width: 70%;          
+  } 
     &-p1 {
     }
 
@@ -134,12 +170,25 @@ body {
   &__right {
     flex: 0 0 1fr;
     padding-left: 3.3rem;
-    @media only screen and (max-width: 56.25em) { 
+
+    //////// 1136px ///////
+    @media only screen and (max-width: 71em) {
       padding-left: 0;
+    }
+
+    //////// 1078px ///////
+    @media only screen and (max-width: 67.375em) {
+      margin-left: -3.5rem;
+    }
+
+    //////// 900px ///////
+    @media only screen and (max-width: 56.25em) {
+      margin-left: -2rem;
     }
 
     &-images {
       height: 0;
+      margin-top: $mg-14;
       .profile-image {
         position: relative;
         width: 75%;
@@ -147,9 +196,16 @@ body {
         border-radius: 0 0 230px 230px;
         z-index: 1;
 
-        @media only screen and (max-width: 56.25em) {
-          width: 74%; 
-            }
+         //////// 1078px ///////
+        @media only screen and (max-width: 67.375em) {
+          width: 39.8rem;
+          // transform: translate(4.7rem, -36.6rem);
+        }
+
+        //////// 800px ///////
+  @media only screen and (max-width: 50em) {
+    width: 70%;          
+  }   
         
       }
 
@@ -158,13 +214,19 @@ body {
         height: 50rem;
         transform: translate(-0.5rem, -42rem);
 
+         //////// 1078px ///////
+        @media only screen and (max-width: 67.375em) {
+          width: 44rem;
+          transform: translate(4.7rem, -38.6rem);
+        }
+
+        //////// 900px ///////
         @media only screen and (max-width: 56.25em) {
-         width: 48rem;      
-         height: 40rem;
-         transform: translate(0, -32rem);           
-          
-            }     
-      }   
+          width: 56rem;
+          height: 43rem;
+          transform: translate(-2rem, -35rem);
+        }
+      }
     }
   }
 }
@@ -282,7 +344,7 @@ body {
 
     &-line {
       position: relative;
-  
+
       &::after {
         position: absolute;
         content: "";
@@ -290,13 +352,11 @@ body {
         left: 0;
         top: 4.6rem;
         width: 102%;
-        height: 3px;  
+        height: 3px;
         background-color: $color-primary-1;
       }
     }
   }
-
-
 
   &__words {
     display: flex;
@@ -342,18 +402,17 @@ body {
     &-line {
       position: relative;
 
-    &::after {
-      position: absolute;
-      content: "";
-      display: block;
-      left: 0;
-      top: 4.6rem;  
-      width: 108%;
-      height: 3px;
-      background-color: $color-primary-1;
+      &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        left: 0;
+        top: 4.6rem;
+        width: 108%;
+        height: 3px;
+        background-color: $color-primary-1;
+      }
     }
-    }
-    
   }
 }
 

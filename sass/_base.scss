@@ -7,17 +7,43 @@
 }
 
 html {
-  font-size: 62.5%; //this is 10px.
+  font-size: 62.5%; //this is 10px = 1rem.
 
   //////// 900px ///////
   @media only screen and (max-width: 56.25em) {
-    font-size: 56.25%; //9px
+    font-size: 56.25%; //9px  = 1rem
+  }
+
+  //////// 700px ///////
+  @media only screen and (max-width: 43.75em) {
+    font-size: 50%; //8px  = 1rem
+  }
+
+  //////// 400px ///////
+  @media only screen and (max-width: 25em) {
+    font-size: 43.75%; //7px = 1rem
+  }
+
+  //////// 350px ///////
+  @media only screen and (max-width: 21.875em) {
+    font-size: 37.5%; //6px = 1rem
+  }
+
+  //////// 250px ///////
+  @media only screen and (max-width: 15.625em) {
+    font-size: 31.25%; //5px = 1rem
+  }
+
+  //////// 220px ///////
+  @media only screen and (max-width: 13.75em) {
+    font-size: 25%; //4px = 1rem  
   }
 }
 
 body {
   font-family: "DM Sans", sans-serif;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 a {
