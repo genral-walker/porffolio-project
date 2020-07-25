@@ -114,7 +114,8 @@
     width: 4.2rem;
     text-align: center;
     height: min-content;
-    border-radius: 50%;
+    border-radius: 50%;      
+    min-width: 4.5rem;  
 
     @media only screen and (hover: hover) {
       &:hover {

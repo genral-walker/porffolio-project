@@ -132,10 +132,10 @@ body {
       flex: 0 0 45%;
     }
 
-           //////// 800px ///////
-  @media only screen and (max-width: 50em) {
-    width: 70%;          
-  } 
+    //////// 800px ///////
+    @media only screen and (max-width: 50em) {
+      width: 70%;
+    }
     &-p1 {
     }
 
@@ -187,26 +187,63 @@ body {
     }
 
     &-images {
-      height: 0;
       margin-top: $mg-14;
-      .profile-image {
-        position: relative;
-        width: 75%;
-        transform: translate(6rem, 9rem);
-        border-radius: 0 0 230px 230px;
+      border: none;
+      border: 1px solid rgb(21, 255, 0);
+      position: relative;
+
+      //////// 800px ///////
+      @media only screen and (max-width: 50em) {
+        border-radius: 0 0 46% 46%; 
+        height: 48rem;
+        width: 40rem;
+        top: 7rem;
+        left: 2.5rem;
+        background: url(../assets/images/blue-shirt-guy.svg) center no-repeat,
+          url(../assets/images/Ellipse.svg) center 11rem no-repeat;
+   
+        background-size: 33rem, 38rem;   
+      }
+
+       //////// 630px ///////
+       @media only screen and (max-width: 39.357em) {
+        width: 33rem;
+        border-radius: 0 0 30% 30%;
+        left: 4rem;
+  
+        background-size: 30rem, 35rem;        
+        background-position: center 8rem, .3rem 18rem;                       
+       }
+       
+       
+       //////// 550px ///////
+       @media only screen and (max-width: 39.357em) {   
+         left: 2rem;
+       }  
+                                       
+      .profile-image {              
+        position: relative;     
+        width: 75%;  
+        transform: translate(6rem, 9rem);     
+        border-radius: 0 0 230px 230px;        
         z-index: 1;
 
-         //////// 1078px ///////
+        //////// 1078px ///////
         @media only screen and (max-width: 67.375em) {
           width: 39.8rem;
           // transform: translate(4.7rem, -36.6rem);
         }
 
         //////// 800px ///////
-  @media only screen and (max-width: 50em) {
-    width: 70%;          
-  }   
-        
+        @media only screen and (max-width: 50em) {
+          position: absolute;
+          right: 13rem;
+          bottom: 10rem;
+          width: 100%;
+          height: 100%;
+          border-radius: 0 0 230px 230px;
+          display: none;
+        }
       }
 
       .bg-eclipse {
@@ -214,7 +251,7 @@ body {
         height: 50rem;
         transform: translate(-0.5rem, -42rem);
 
-         //////// 1078px ///////
+        //////// 1078px ///////
         @media only screen and (max-width: 67.375em) {
           width: 44rem;
           transform: translate(4.7rem, -38.6rem);
@@ -225,6 +262,17 @@ body {
           width: 56rem;
           height: 43rem;
           transform: translate(-2rem, -35rem);
+        }
+
+        //////// 800px ///////
+        @media only screen and (max-width: 50em) {
+          position: absolute;
+          width: 70%;
+          height: 100%;
+
+          transform: translate(0, 0);
+          object-fit: fill;
+          display: none;
         }
       }
     }
