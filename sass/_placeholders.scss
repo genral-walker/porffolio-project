@@ -2,31 +2,30 @@
 ///////////// PLaceholders.
 
 %icon-set {
-    width: 3rem;
-}    
+  width: 3rem;
+}
 
 /// Buttons ///
-    
+
 %button-set {
-    padding: 1.4rem 2.8rem;
-    border-radius: 5px;
+  padding: 1.4rem 2.8rem;
+  border-radius: 5px;
 
-    //////// 350px ///////
-    @media only screen and (max-width: 21.875em) {
-        padding-top: $mg-7;      
-        padding-bottom: $mg-7;   
-      }  
+  //////// 350px ///////
+  @media only screen and (max-width: 21.875em) {
+    padding-top: $mg-7;
+    padding-bottom: $mg-7;
+  }
 
-      //////// 250px ///////
+  //////// 250px ///////
   @media only screen and (max-width: 15.625em) {
     border-radius: 4px;
   }
-}    
+}
 
-%h3-set {   
-     margin-bottom: $mg-7;     
-     &:not(:first-of-type){  
-        margin-top: $mg-17;     
-     };                  
-}    
-   
+%h3-set {
+  margin-bottom: $mg-7;
+  &:not(:first-of-type) {
+    margin-top: $mg-17;
+  }
+}

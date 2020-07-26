@@ -28,17 +28,7 @@ html {
   @media only screen and (max-width: 21.875em) {
     font-size: 37.5%; //6px = 1rem
   }
-
-  //////// 250px ///////
-  @media only screen and (max-width: 15.625em) {
-    font-size: 31.25%; //5px = 1rem
-  }
-
-  //////// 220px ///////
-  @media only screen and (max-width: 13.75em) {
-    font-size: 25%; //4px = 1rem  
-  }
-}
+} 
 
 body {
   font-family: "DM Sans", sans-serif;

@@ -94,6 +94,11 @@ body {
 
   &__h1 {
     font-weight: bolder;
+
+      //////// 260px ///////
+  @media only screen and (max-width: 16.25em) {
+    font-size: 4.3rem;   
+  }
   }
 
   &__p-2 {
@@ -106,6 +111,11 @@ body {
       letter-spacing: 0;
       padding: 0 1rem;
     }
+
+         //////// 260px ///////
+  @media only screen and (max-width: 16.25em) {
+    font-size: 2rem;     
+  }
   }
   .red {
     color: $color-primary-1;
@@ -235,12 +245,19 @@ body {
       //////// 300px ///////
       @media only screen and (max-width: 18.75em) {
           top: 97rem;
-          left: 4rem;
+          left: 3rem;
       }   
+
+                   //////// 260px ///////
+  @media only screen and (max-width: 16.25em) {
+     top: 88rem;
+     left: .7rem; 
+  }
 
       //////// 220px ///////
   @media only screen and (max-width: 13.75em) {
-    top: 104rem; 
+    top: 90rem;   
+    right: 2rem;                
   }
 
     &-images {
@@ -358,6 +375,11 @@ body {
   grid-template-columns: minmax(2vw, 43vw) 1fr minmax(2vw, 43vw);
   justify-content: space-around; 
 
+  //////// 800px ///////
+  @media only screen and (min-width: 50em) {
+    margin-top: -9vw;           
+  } 
+
      //////// 800px ///////
      @media only screen and (max-width: 50em) {
       margin-top: 20vw;  
@@ -414,7 +436,7 @@ body {
      //////// 500px ///////
      @media only screen and (max-width: 31.25em) {
       &:not(:last-of-type) {   
-        margin-bottom: 3rem;     
+        margin-bottom: $mg-15;        
       }
      }
 
@@ -470,13 +492,13 @@ body {
 
   &__p1 {
     font-size: $font-size-md-3;
-    margin-top: $rs-19;
+    margin-top: $mg-17;  
   }
 
   &__h2 {
     font-size: $font-size-lg-2;
     color: $color-primary-1;
-    margin: 1.2vw 0 4.5vw;
+    margin: 1.2vw 0 $mg-16;
 
     &-line {
       position: relative;
@@ -496,7 +518,7 @@ body {
 
   &__words {
     display: flex;
-    padding: 3vw 0;
+    padding: $mg-13 0;
     align-items: center;
     border-top: 1px solid rgba(0, 0, 0, 0.12);
 
@@ -507,48 +529,18 @@ body {
 
   &__p {
     @include space-l;
-    // margin-top: $mg-8;
     font-size: $font-size-md-2;
+
+      //////// 650px ///////
+  @media only screen and (max-width: 40.625em) {
+    font-size: 2.2rem;   
+    width: 75%; 
+  }   
   }
 
   &__anchor-container {
     align-self: flex-end;
-  }
-}
-
-.form {
-  grid-row: 6 / 7;
-  grid-column: center-start / center-end;
-  padding: 10vw 0 0;
-  margin-bottom: 5rem;
-
-  &__p {
-    font-size: $font-size-md-4;
-    margin-bottom: 0.5vw;
-
-    &-1 {
-      font-size: $font-size-md-3;
-    }
-  }
-
-  &__h2 {
-    font-size: $font-size-lg-2;
-    color: $color-primary-1;
-
-    &-line {
-      position: relative;
-
-      &::after {
-        position: absolute;
-        content: "";
-        display: block;
-        left: 0;
-        top: 4.6rem;
-        width: 108%;
-        height: 3px;
-        background-color: $color-primary-1;
-      }
-    }
+    
   }
 }
 
@@ -559,8 +551,12 @@ body {
   padding-bottom: 1rem;
 
   &__p {
-    font-size: $font-size-sm-1;
-    padding: 2rem;
+    font-size: $font-size-sm-1;  
+    padding: 2rem; 
+       //////// 350px ///////
+       @media only screen and (max-width: 21.875em) {
+        font-weight: bold;   
+      }
   }
 
   &__anchors {
