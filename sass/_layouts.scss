@@ -95,10 +95,10 @@ body {
   &__h1 {
     font-weight: bolder;
 
-      //////// 260px ///////
-  @media only screen and (max-width: 16.25em) {
-    font-size: 4.3rem;   
-  }
+    //////// 260px ///////
+    @media only screen and (max-width: 16.25em) {
+      font-size: 4.3rem;
+    }
   }
 
   &__p-2 {
@@ -112,10 +112,10 @@ body {
       padding: 0 1rem;
     }
 
-         //////// 260px ///////
-  @media only screen and (max-width: 16.25em) {
-    font-size: 2rem;     
-  }
+    //////// 260px ///////
+    @media only screen and (max-width: 16.25em) {
+      font-size: 2rem;
+    }
   }
   .red {
     color: $color-primary-1;
@@ -187,6 +187,12 @@ body {
       @media only screen and (max-width: 31.25em) {
         margin-top: 55rem;
       }
+
+          //////// 220px ///////
+          @media only screen and (max-width: 13.75em) {
+            margin-top: 42rem; 
+          }
+    
     }
 
     p {
@@ -234,31 +240,36 @@ body {
     //////// 370px ///////
     @media only screen and (max-width: 23.125em) {
       left: 6.5rem;
-      top: 88rem;  
+      top: 88rem;
     }
 
-     //////// 350px ///////
-     @media only screen and (max-width: 21.875em) {
-      top: 93rem;   
+    //////// 350px ///////
+    @media only screen and (max-width: 21.875em) {
+      top: 93rem;
     }
 
-      //////// 300px ///////
-      @media only screen and (max-width: 18.75em) {
-          top: 97rem;
-          left: 3rem;
-      }   
+    //////// 300px ///////
+    @media only screen and (max-width: 18.75em) {
+      top: 97rem;
+      left: 3rem;
+    }
 
-                   //////// 260px ///////
-  @media only screen and (max-width: 16.25em) {
-     top: 88rem;
-     left: .7rem; 
-  }
+    //////// 260px ///////
+    @media only screen and (max-width: 16.25em) {
+      top: 88rem;
+      left: 0.7rem;
+    }
 
-      //////// 220px ///////
-  @media only screen and (max-width: 13.75em) {
-    top: 90rem;   
-    right: 2rem;                
-  }
+    //////// 220px ///////
+    @media only screen and (max-width: 13.75em) {
+      top: 84rem;
+      right: 4rem;
+    } 
+
+     //////// 210px ///////
+     @media only screen and (max-width: 13.125em) {
+      top: 89rem;  
+    } 
 
     &-images {
       margin-top: $mg-14;
@@ -301,10 +312,17 @@ body {
         width: 40rem;
         background: url(../assets/images/blue-shirt-guy.svg) center no-repeat,
           url(../assets/images/Ellipse.svg) center 11rem no-repeat;
-        background-size: auto, auto;
         background-size: 33rem, 38rem;
       }
 
+          //////// 250px ///////
+    @media only screen and (max-width: 15.625em) {
+      border-radius: 0 0 40% 40%; 
+        width: 35rem;  
+        background-size: 27rem, 30rem;
+        background-position: center 11rem, center 20rem;    
+    }
+    
       .profile-image {
         position: relative;
         width: 75%;
@@ -373,24 +391,24 @@ body {
   display: grid;
   grid-template-rows: repeat(3, minmax(min-content, max-content));
   grid-template-columns: minmax(2vw, 43vw) 1fr minmax(2vw, 43vw);
-  justify-content: space-around; 
+  justify-content: space-around;
 
   //////// 800px ///////
   @media only screen and (min-width: 50em) {
-    margin-top: -9vw;           
-  } 
+    margin-top: -9vw;
+  }
 
-     //////// 800px ///////
-     @media only screen and (max-width: 50em) {
-      margin-top: 20vw;  
-    }
+  //////// 800px ///////
+  @media only screen and (max-width: 50em) {
+    margin-top: 20vw;
+  }
 
-      //////// 500px ///////
-      @media only screen and (max-width: 31.25em) {
-       display: block;
-      }
+  //////// 500px ///////
+  @media only screen and (max-width: 31.25em) {
+    display: block;
+  }
   &__words {
-    grid-row: 1 / 2; 
+    grid-row: 1 / 2;
     grid-column: 1 / -1;
     &-p1 {
       color: $color-white;
@@ -403,12 +421,12 @@ body {
       margin-bottom: $rs-15;
       font-size: $font-size-md-1;
 
-           //////// 500px ///////
-     @media only screen and (max-width: 31.25em) {
-      margin-bottom: $mg-18; 
-     }
+      //////// 500px ///////
+      @media only screen and (max-width: 31.25em) {
+        margin-bottom: $mg-18;
+      }
     }
- 
+
     &-line {
       height: 3px;
       position: relative;
@@ -433,12 +451,12 @@ body {
     padding: 5.5vw 0 5.5vw 2vw;
     font-size: $font-size-md-3;
     border-radius: 7px;
-     //////// 500px ///////
-     @media only screen and (max-width: 31.25em) {
-      &:not(:last-of-type) {   
-        margin-bottom: $mg-15;        
+    //////// 500px ///////
+    @media only screen and (max-width: 31.25em) {
+      &:not(:last-of-type) {
+        margin-bottom: $mg-15;
       }
-     }
+    }
 
     &-words {
       flex: 0 0 51%;
@@ -492,7 +510,7 @@ body {
 
   &__p1 {
     font-size: $font-size-md-3;
-    margin-top: $mg-17;  
+    margin-top: $mg-17;
   }
 
   &__h2 {
@@ -531,16 +549,21 @@ body {
     @include space-l;
     font-size: $font-size-md-2;
 
-      //////// 650px ///////
-  @media only screen and (max-width: 40.625em) {
-    font-size: 2.2rem;   
-    width: 75%; 
-  }   
+    //////// 650px ///////
+    @media only screen and (max-width: 40.625em) {
+      font-size: 2.2rem;
+      width: 75%;
+    }
+
+        //////// 250px ///////
+        @media only screen and (max-width: 15.625em) {
+          font-size: 2rem;    
+        }
+    
   }
 
   &__anchor-container {
     align-self: flex-end;
-    
   }
 }
 
@@ -551,12 +574,12 @@ body {
   padding-bottom: 1rem;
 
   &__p {
-    font-size: $font-size-sm-1;  
-    padding: 2rem; 
-       //////// 350px ///////
-       @media only screen and (max-width: 21.875em) {
-        font-weight: bold;   
-      }
+    font-size: $font-size-sm-1;
+    padding: 2rem;
+    //////// 350px ///////
+    @media only screen and (max-width: 21.875em) {
+      font-weight: bold;
+    }
   }
 
   &__anchors {

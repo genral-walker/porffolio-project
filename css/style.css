@@ -159,6 +159,9 @@ body {
     @media only screen and (max-width: 31.25em) {
       .story__left-description-1 {
         margin-top: 55rem; } }
+    @media only screen and (max-width: 13.75em) {
+      .story__left-description-1 {
+        margin-top: 42rem; } }
     .story__left p {
       letter-spacing: 0.5px;
       line-height: 3rem; }
@@ -199,11 +202,14 @@ body {
     @media only screen and (max-width: 16.25em) {
       .story__right {
         top: 88rem;
-        left: .7rem; } }
+        left: 0.7rem; } }
     @media only screen and (max-width: 13.75em) {
       .story__right {
-        top: 90rem;
-        right: 2rem; } }
+        top: 84rem;
+        right: 4rem; } }
+    @media only screen and (max-width: 13.125em) {
+      .story__right {
+        top: 89rem; } }
     .story__right-images {
       margin-top: 4.5rem;
       border: none;
@@ -234,8 +240,13 @@ body {
           height: 48rem;
           width: 40rem;
           background: url(../assets/images/blue-shirt-guy.svg) center no-repeat, url(../assets/images/Ellipse.svg) center 11rem no-repeat;
-          background-size: auto, auto;
           background-size: 33rem, 38rem; } }
+      @media only screen and (max-width: 15.625em) {
+        .story__right-images {
+          border-radius: 0 0 40% 40%;
+          width: 35rem;
+          background-size: 27rem, 30rem;
+          background-position: center 11rem, center 20rem; } }
       .story__right-images .profile-image {
         position: relative;
         width: 75%;
@@ -397,6 +408,9 @@ body {
       .articles__p {
         font-size: 2.2rem;
         width: 75%; } }
+    @media only screen and (max-width: 15.625em) {
+      .articles__p {
+        font-size: 2rem; } }
   .articles__anchor-container {
     align-self: flex-end; }
 
