@@ -29,6 +29,9 @@ a {
   text-decoration: none;
   color: currentColor; }
 
+li {
+  list-style-type: none; }
+
 h3 {
   font-size: 2.5rem; }
 
@@ -435,6 +438,9 @@ body {
 .header__anchor {
   display: inline-block;
   height: 3rem; }
+  @media only screen and (hover: hover) {
+    .header__anchor:hover {
+      cursor: pointer; } }
 
 .header__nav {
   display: inline-block;
@@ -473,6 +479,22 @@ body {
     @media only screen and (max-width: 21.875em) {
       .header__nav::after {
         top: 1rem; } }
+
+.navigation-page {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(208, 60, 60, 0.6);
+  position: fixed;
+  z-index: 5000;
+  font-size: 3.5rem;
+  color: white; }
+  .navigation-page__list {
+    display: block;
+    margin: auto; }
+  .navigation-page .list {
+    color: white; }
+    .navigation-page .list__twitter {
+      background-color: white; }
 
 .intro-section__btn {
   margin: 0 auto;

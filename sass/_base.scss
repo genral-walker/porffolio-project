@@ -41,6 +41,10 @@ a {
   color: currentColor;
 }
 
+li {
+  list-style-type: none;
+}
+
 h3 {
   font-size: $font-size-md-2;
 }
