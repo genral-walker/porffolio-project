@@ -1,31 +1,29 @@
-
 ///////////////////////////////////
 /////////// VARIABLES/////////////
 
-
-////// COLORS /////// 
-$color-primary-1: #D03C3C;
-$color-primary-2: linear-gradient(180deg, #FFD8CB 0%, #F9D29D 100%);
-$color-primary-3:  #EC9EA0;
+////// COLORS ///////
+$color-primary-1: #d03c3c;
+$color-primary-2: linear-gradient(180deg, #ffd8cb 0%, #f9d29d 100%);
+$color-primary-3: #ec9ea0;
 $color-white: white;
 
 //////FONT-SIZES ///////
 $font-size-lg-1: 4.5rem;
-$font-size-lg-2: 3.5rem;
-$font-size-md-1: 3rem;
-$font-size-md-2: 2.5rem;  
-$font-size-md-3: 1.88rem; 
-$font-size-md-4: 1.65rem; 
-$font-size-sm-1: 1.5rem;
+$font-size-lg-2: 3.5rem;                         
+$font-size-md-1: 3rem;      
+$font-size-md-2: 2.5rem;      
+$font-size-md-3: 1.88rem;
+$font-size-md-4: 1.65rem;
+$font-size-sm-1: 1.5rem;            
 $font-size-sm-2: 1.3rem;
 $font-size-sm-3: 1.13rem;
 
 /////////MARGINS AND PADDINGS /////////
-$mg-1: .5rem;
-$mg-2: .8rem; 
+$mg-1: 0.5rem;
+$mg-2: 0.8rem;
 $mg-3: 1rem;
 $mg-4: 1.3rem;
-$mg-5: 1.5rem; 
+$mg-5: 1.5rem;
 $mg-6: 1.7rem;
 $mg-7: 2rem;
 $mg-8: 2.5rem;
@@ -37,44 +35,42 @@ $mg-13: 4rem;
 $mg-14: 4.5rem;
 $mg-15: 5rem;
 $mg-16: 6rem;
-$mg-17: 7rem;   
-$mg-18: 7.5rem;  
+$mg-17: 7rem;
+$mg-18: 7.5rem;
 $mg-19: 8rem;
 $mg-20: 10rem;
 
 ///////// RESPONSIVE MARGINS AND PADDINGS /////////
- $rs-1: .5vw;
- $rs-2: 1vw;
- $rs-3: 1.5vw;
- $rs-4: 1.7vw;
- $rs-5: 2vw;
- $rs-6: 2.5vw;
- $rs-7: 2.7vw;
- $rs-8: 3vw;
- $rs-9: 3.5vw;
- $rs-11: 3.7vw;
- $rs-12: 4vw;
- $rs-13: 4.5vw;
- $rs-14: 4.7vw;
- $rs-15: 4vw;
- $rs-16: 5vw;
- $rs-17: 5.5vw;
- $rs-18: 4.7vw;
- $rs-19: 6vw;
- $rs-20: 6.5vw;
-
+$rs-1: 0.5vw;
+$rs-2: 1vw;
+$rs-3: 1.5vw;
+$rs-4: 1.7vw;
+$rs-5: 2vw;
+$rs-6: 2.5vw;
+$rs-7: 2.7vw;
+$rs-8: 3vw;
+$rs-9: 3.5vw;
+$rs-11: 3.7vw;
+$rs-12: 4vw;
+$rs-13: 4.5vw;
+$rs-14: 4.7vw;
+$rs-15: 4vw;
+$rs-16: 5vw;
+$rs-17: 5.5vw;
+$rs-18: 4.7vw;
+$rs-19: 6vw;
+$rs-20: 6.5vw;
 
 /////////////////////////////////////
 ////////// MIXINS
 @mixin space-l {
-    letter-spacing: 0.5px;
-}     
+  letter-spacing: 0.5px;
+}
 
 @mixin high-l {
-    line-height: 3rem; 
-} 
+  line-height: 3rem;
+}
 
 @mixin margin-right {
-    margin-right: 2vw;   
-     
+  margin-right: 2vw;
 }

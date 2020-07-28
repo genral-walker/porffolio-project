@@ -8,12 +8,12 @@
 /// Buttons ///
 
 %button-set {
-  padding: 1.4rem 2.8rem;
-  border-radius: 5px;
+  padding: 1.4rem 2.8rem;   
+  border-radius: 5px;  
 
   //////// 350px ///////
   @media only screen and (max-width: 21.875em) {
-    padding-top: $mg-7;
+    padding-top: $mg-7;  
     padding-bottom: $mg-7;
   }
 

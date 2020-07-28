@@ -4,10 +4,8 @@
     height: 3rem;
 
     @media only screen and (hover: hover) {
-      &:hover {
-        cursor: pointer;
-
-
+      &:hover {   
+        cursor: pointer;       
       }
     }
   }
@@ -16,7 +14,7 @@
     display: inline-block;
     position: relative;
     background-color: black;
-    width: 3rem;   
+    width: 3rem;
     height: 2px;
 
     //////// 250px ///////
@@ -69,42 +67,39 @@
 .navigation-page {
   width: 100vw;
   height: 100vh;
-  background-color: rgba( $color-primary-1, .6);
-  position: fixed;         
-  z-index: 5000;    
-  font-size: $font-size-lg-2;        
-  color: $color-white;     
+  background-color: rgba($color-primary-1, 0.6);
+  position: fixed;
+  z-index: 5000;
+  font-size: $font-size-lg-2;
+  color: $color-white;
 
   &__list {
     display: block;
-    margin: auto;    
-  } 
+    margin: auto;
+  }
 
   .list {
-
     &__twitter {
-     background-color: $color-white; 
+      background-color: $color-white;
     }
 
     &__linkedin {
-
     }
 
     &__github {
-
     }
-    color: $color-white;  
+    color: $color-white;
   }
-}  
+}
 
-.intro-section {     
+.intro-section {
   &__btn {
-    margin: 0 auto; 
+    margin: 0 auto;
     padding-top: 5.5vh;
     margin-top: $mg-8;
     font-size: $font-size-sm-1;
-    font-weight: bolder;    
-    width: max-content;   
+    font-weight: bolder;
+    width: max-content;
 
     //////// 350px ///////
     @media only screen and (max-width: 21.875em) {
@@ -244,32 +239,33 @@
   margin-bottom: 5rem;
 
   &__content {
-    display: flex;    
-    padding: 0 2.5vw;     
-    margin-top: 3vw;    
+    display: flex;
+    padding: 0 2.5vw;
+    margin-top: 3vw;
 
     //////// 500px ///////
     @media only screen and (max-width: 31.25em) {
       display: block;
     }
 
-      //////// 220px ///////
-      @media only screen and (max-width: 13.75em) {
-        padding: 0; 
-      } 
+    //////// 220px ///////
+    @media only screen and (max-width: 13.75em) {
+      padding: 0;
+    }
   }
 
   &__left {
     flex: 0 0 40%;
   }
 
-&__p {
-  font-size: $font-size-md-4;
-  margin-bottom: $mg-3;
+  &__p {
+    font-size: $font-size-md-4;
+    margin-bottom: $mg-3;
 
-  //////// 400px ///////
-  @media only screen and (max-width: 25em) {
-    font-size: $font-size-md-3; }
+    //////// 400px ///////
+    @media only screen and (max-width: 25em) {
+      font-size: $font-size-md-3;
+    }
 
     &-1 {
       font-size: $font-size-md-3;
@@ -281,7 +277,7 @@
       display: inline-block;
       margin: $mg-4 0 0;
     }
-  } 
+  }
 
   &__h2 {
     font-size: $font-size-lg-2;
@@ -350,8 +346,9 @@
       font-size: $font-size-md-4;
       margin-bottom: $mg-1;
       //////// 400px ///////
-  @media only screen and (max-width: 25em) {
-    font-size: $font-size-md-3; }
+      @media only screen and (max-width: 25em) {
+        font-size: $font-size-md-3;
+      }
     }
   }
 
@@ -392,7 +389,7 @@
       //////// 500px ///////
       @media only screen and (max-width: 31.25em) {
         width: 100%;
-        border-radius: 3px;   
+        border-radius: 3px;
       }
     }
 
@@ -407,6 +404,5 @@
       cursor: pointer;
       margin: $mg-7 0 0 auto;
     }
-  } 
-  
+  }
 }
