@@ -13,14 +13,11 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
+
   grid-row: 1/ 2;
   grid-column: center-start / center-end;
   padding: 3rem 0 1rem;
   font-size: $font-size-md-3;
-
-  &__host {
-    font-weight: bold;
-  }
 
   &__nav-container {
     margin-left: auto;
@@ -56,7 +53,7 @@ body {
   }
 
   &__github {
-    @extend %icon-set;         
+    @extend %icon-set;
   }
 }
 
@@ -85,6 +82,8 @@ body {
     font-size: $font-size-sm-1;
     font-weight: 500;
     margin-bottom: $mg-3;
+    @include text-scale;
+    
 
     //////// 350px ///////
     @media only screen and (max-width: 21.875em) {

@@ -1,0 +1,15 @@
+
+.nav-rotate {
+    background-color: transparent;
+    &::before {
+        background-color: $color-primary-1;
+      transform: rotate(135deg);
+      bottom: 0;
+    }
+  
+    &::after {
+        background-color: $color-primary-1;
+      transform: rotate(-135deg);
+      top: 0;
+    }
+  }
