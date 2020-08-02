@@ -82,8 +82,7 @@ body {
     font-size: $font-size-sm-1;
     font-weight: 500;
     margin-bottom: $mg-3;
-    @include text-scale;
-    
+    @include text-scale(scale(1.2) rotate(2deg));
 
     //////// 350px ///////
     @media only screen and (max-width: 21.875em) {
@@ -156,13 +155,11 @@ body {
       width: 100%;
     }
 
-    &-p1 {
-    }
-
     &-h2 {
       font-size: $font-size-lg-2;
       color: $color-primary-1;
       margin: $mg-4 0 $mg-18;
+
     }
     &-line {
       position: relative;
@@ -179,6 +176,7 @@ body {
 
     h3 {
       @extend %h3-set;
+      @include text-scale(skewX(15deg));
     }
 
     &-description-1 {
@@ -416,7 +414,7 @@ body {
 
     &-h3 {
       color: $color-white;
-      margin-bottom: $rs-15;
+      margin-bottom: 4vw;
       font-size: $font-size-md-1;
 
       //////// 500px ///////
@@ -454,6 +452,10 @@ body {
       &:not(:last-of-type) {
         margin-bottom: $mg-15;
       }
+    }
+
+    &-h {
+      @include text-scale(skewX(15deg));
     }
 
     &-words {
@@ -572,14 +574,18 @@ body {
 
   &__p {
     font-size: $font-size-sm-1;
-    padding: 2rem;
-    //////// 350px ///////
+    padding:$mg-7;
+    padding-bottom: 0;
+    margin-bottom: $mg-5;
+    @include text-scale(scale(1.2) rotate(2deg));
+    //////// 350px /////// 
     @media only screen and (max-width: 21.875em) {
       font-weight: bold;
     }
   }
 
   &__anchors {
+    @include img-rotate;
     display: inline-block;
     &:not(:last-of-type) {
       margin-right: $mg-8;

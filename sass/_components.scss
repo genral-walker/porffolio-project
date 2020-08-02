@@ -387,6 +387,7 @@
   }
 
   &__anchors {
+    @include img-rotate;
     display: inline-block;
     &:not(:last-of-type) {
       margin-right: $mg-7;
@@ -472,8 +473,4 @@
   }
 }
 
-.foot {
-  &__anchors {
-    @include img-rotate;
-  }
-}
+

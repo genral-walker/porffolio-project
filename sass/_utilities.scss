@@ -40,26 +40,6 @@ $mg-18: 7.5rem;
 $mg-19: 8rem;
 $mg-20: 10rem;
 
-///////// RESPONSIVE MARGINS AND PADDINGS /////////
-$rs-1: 0.5vw;
-$rs-2: 1vw;
-$rs-3: 1.5vw;
-$rs-4: 1.7vw;
-$rs-5: 2vw;
-$rs-6: 2.5vw;
-$rs-7: 2.7vw;
-$rs-8: 3vw;
-$rs-9: 3.5vw;
-$rs-11: 3.7vw;
-$rs-12: 4vw;
-$rs-13: 4.5vw;
-$rs-14: 4.7vw;
-$rs-15: 4vw;
-$rs-16: 5vw;
-$rs-17: 5.5vw;
-$rs-18: 4.7vw;
-$rs-19: 6vw;
-$rs-20: 6.5vw;
 
 /////////////////////////////////////
 ////////// MIXINS
@@ -68,14 +48,14 @@ $rs-20: 6.5vw;
 }
 
 @mixin high-l {
-  line-height: $mg-10;
+  line-height: $mg-10; 
 }
 
 @mixin margin-right {
   margin-right: 2vw;
 }
 
-@mixin text-scale {
+@mixin text-scale($transform){
   transition: 0.4s;
   @media only screen and (hover: hover) {
     &:hover {
@@ -86,7 +66,7 @@ $rs-20: 6.5vw;
         rgb(82, 83, 87) 50%
       );
       color: transparent;
-      transform: scale(1.2) rotate(2deg);      
+      transform: $transform;      
       text-shadow: 2px 2px 10px grey;
     }
   }
