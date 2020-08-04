@@ -21,6 +21,7 @@ body {
 
   &__nav-container {
     margin-left: auto;
+
   }
 
   &__nav {
@@ -82,6 +83,9 @@ body {
     font-size: $font-size-sm-1;
     font-weight: 500;
     margin-bottom: $mg-3;
+    width: max-content;
+    margin-left: auto; 
+    margin-right: auto;
     @include text-scale(scale(1.2) rotate(2deg));
 
     //////// 350px ///////
@@ -459,7 +463,7 @@ body {
     }
 
     &-words {
-      flex: 0 0 51%;
+      flex: 0 0 51%; 
     }
     &-images {
       flex: 0 0 1fr;
@@ -469,6 +473,11 @@ body {
       width: 90%;
       padding-top: 7%;
       border-radius: 17px 17px 10px 10px;
+      @media only screen and (hover: hover) {
+        &:hover {
+          animation: img-move; 
+        }}
+      
     }
     &-p {
       font-size: $font-size-sm-1;
@@ -477,9 +486,11 @@ body {
     &-cta {
       color: $color-primary-1;
       display: block;
+      @include btn-entities-animate;
     }
     &-entity {
       margin-left: 1rem;
+      transition: margin-left 0.3s 0.2s ease-out;
     }
     &-1 {
       grid-row: 2 / 3;
@@ -573,9 +584,11 @@ body {
   padding-bottom: 1rem;
 
   &__p {
+    width: max-content;
+    margin-left: auto; 
+    margin-right: auto;
     font-size: $font-size-sm-1;
     padding:$mg-7;
-    padding-bottom: 0;
     margin-bottom: $mg-5;
     @include text-scale(scale(1.2) rotate(2deg));
     //////// 350px /////// 

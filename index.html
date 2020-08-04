@@ -14,9 +14,18 @@
   <body>
     <section class="header">
       <a class="header__host" href="#">Local Host</a>
+
+      <ul class="header__page-nav">
+        <li class="header__li"><a href="#intro" class="header__li-links">Intoduction</a></li>
+        <li class="header__li"><a href="#story" class="header__li-links">Story</a></li>
+        <li class="header__li"><a href="#features" class="header__li-links">Works</a></li>
+        <li class="header__li"><a href="#articles" class="header__li-links">Articles</a></li>
+        <li class="header__li"><a href="#form" class="header__li-links">Form</a></li>
+      </ul>
     
       <div class="header__nav-container">
         <a href="#" class="header__anchor">
+          <span class="header__bg"></span>
           <span class="header__nav"></span>
         </a>
       </div>
@@ -54,7 +63,7 @@
       </figure>
     </aside>
 
-    <section class="intro-section">
+    <section class="intro-section" id="intro">
       <p class="intro-section__p">Frontend developer ~ Mentor</p>
 
       <h1 class="intro-section__h1">
@@ -77,7 +86,7 @@
       </div>
     </section>
 
-    <section class="story">
+    <section class="story" id="story">
       <div class="story__left">
         <p class="story__left-p1">Meet Me</p>
 
@@ -135,7 +144,7 @@
       </div>
     </section>
 
-    <section class="features">
+    <section class="features" id="features">
       <div class="features__words">
         <p class="features__words-p1">
           Portfolio
@@ -253,7 +262,7 @@
       </div>
     </section>
 
-    <section class="articles">
+    <section class="articles" id="articles">
       <p class="articles__p1">
         Shalaye
       </p>
@@ -311,7 +320,7 @@
       </div>
     </section>
 
-    <form action="" class="form">
+    <form action="" class="form" id="form">
       <p class="form__p form__p-1">
         Totori me one time
       </p>
@@ -358,7 +367,7 @@
           </figure>
         </div>
         <div class="form__right">
-          <label for="name">Name</label>
+          <label id="label-1" for="name">Name</label>
           <input
             type="text"
             name="name"
@@ -367,7 +376,7 @@
             class="form__input form__input-name"
           />
 
-          <label for="message">Message</label>
+          <label id="label-2"  for="message">Message</label>
           <textarea
             name="message"
             id="message"
