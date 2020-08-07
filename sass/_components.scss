@@ -27,25 +27,34 @@
         }
       }
     }
-  }
+  } 
 
-  &__page-nav {
-    display: flex;
-    margin-left: 15.5rem; 
-  }
-
-  &__li {
-    position: relative;
-    &:not(:first-of-type) {
-      margin-left: $mg-12;
+  &__page-navigate {
+   margin: 0 5rem .2rem auto;
+   text-transform: uppercase;
+   font-size: $font-size-sm-1;
+   border: none;
+   color: transparent;
+   background-color: black;
+   background-clip: text;
+   font-weight: bold;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: .3s;
+   animation: pulsate .7s 1;
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 15px rgba(54, 44, 44, 0.202);
     }
-    @include head-nav-aniamte;
-  }
+   &:focus {
+     color: $color-primary-1;
+     transform: translateY(0);
+     box-shadow: none;
+     outline: none;
+     animation: none;
 
-  &__li-links {
-    color: black;
+   }
   }
-
 
   &__anchor {
     display: inline-block;
@@ -75,14 +84,15 @@
   }
   &__bg {
     display: inline-block;
-     background-color: $color-primary-1;
+     background-image: radial-gradient($color-primary-1, rgb(192, 55, 55));
      position: absolute;
-     width: 1rem;
-     height: 1rem;
+     height: 6rem;
+     width: 6rem;
      border-radius: 50%;
      left: 50%;
+     visibility: hidden;
      top: 50vh;
-     transition: .7s; 
+     transition: 1.2s cubic-bezier(0.86, 0, 0.07, 1); 
  }
 
   &__nav {
@@ -92,7 +102,7 @@
     background-color: black;
     width: 3rem;
     height: 2px;
-    transition: 0.2s, transform 7s ease-in-out;
+    transition: 0.2s, transform .8s cubic-bezier(0.86, 0, 0.07, 1);
 
     //////// 250px ///////
     @media only screen and (max-width: 15.625em) {
@@ -142,6 +152,53 @@
     }
   }
 }
+
+.ul-nav {
+ 
+}
+.list-nav {
+  display: flex;
+  position: absolute;
+  z-index: 200;
+  top: 2rem;
+  &__li {
+    &:not(:first-of-type) {
+      margin-left: 3vw;
+    }
+  }
+  &__links {
+    color: black;
+    position: relative;
+    font-size: $font-size-md-3;
+    transition: color 0.3s 0.1s;
+
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        background-color: transparent;
+        width: 1px;
+        height: 2px;
+        top: 0.5rem;
+        left: -1rem;
+        transform: scaleY(0);
+        transform-origin: center 10px;
+        transition: 0.3s, width 0.3s 0.3s ease-in-out;
+      
+    }
+    @include head-list-nav-aniamte;
+    &:focus {
+      color: $color-primary-1;
+      &::before {
+        background-color: rgba($color-primary-1, 0.8);
+        border-radius: 2px;
+        transform: scaleY(1.8);
+        height: 55%;
+        width: 130.5%;
+    }
+    }
+  }
+} 
 
 .side-nav {
   &__anchor {

@@ -1,5 +1,6 @@
 //////////// JS ANIMATION ////////////
 
+
 .anchor-hover {
   @media only screen and (hover: hover) {
     &:hover {
@@ -55,7 +56,8 @@
   }
 
   .bg-show {
-   transform: scale(200);
+   transform: scale(150);
+   visibility: visible;
 }
 
 .color-primary {
@@ -64,16 +66,23 @@
 }
 
   ////////////// CSS KEYFRAMES /////////////
-  @keyframes img-move {
+  @keyframes pulsate {
     0% {
-      transform: translateY(0);
+        transform: scale(1);
+        box-shadow: none;
     }
 
     50% {
-      transform: translateY(20px);
+        transform: scale(1.05);
+        box-shadow: 0 1rem 3rem rgba(224, 36, 36, 0.411);
     }
 
     100% {
-      transform: translateY(0);
+        transform: scale(1);
+        box-shadow: none;
     }
-  }
+}
+
+@keyframes li-nav-animate {
+  
+}
