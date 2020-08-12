@@ -12,29 +12,90 @@
   </head>
 
   <body>
-    <section class="header" id="intro">
+    <nav class="header" id="intro">
       <a class="header__host" href="#">Local Host</a>
-    <button class="header__page-navigate">Navigate Page</button>
+
+      <div class="header__dropdown">
+        <button class="header__page-navigate">Navigate Page</button>
+
+        <ul class="dropdown__ul">
+          <li class="dropdown__li">
+            <a href="#intro" class="dropdown__links">Intoduction</a>
+          </li>
+          <li class="dropdown__li">
+            <a href="#story" class="dropdown__links">Story</a>
+          </li>
+          <li class="dropdown__li">
+            <a href="#features" class="dropdown__links">Works</a>
+          </li>
+          <li class="dropdown__li">
+            <a href="#articles" class="dropdown__links">Articles</a>
+          </li>
+          <li class="dropdown__li">
+            <a href="#form" class="dropdown__links">Form</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="header__nav-contain">
+        <input
+          type="checkbox"
+          class="header__input"
+          id="nav-toggle"
+          name="nav-toggle"
+        />
+
+        <label for="nav-toggle" class="header__label">
+          <span class="header__span"></span>
+        </label>
+
+        <div class="header__bg">&nbsp;</div>
+
+        <nav class="nav">
+
+          <div class="nav__container">
+            <ul class="nav__drop">
+              <li class="nav__item">
+                <a href="#intro" class="nav__link">Intoduction</a>
+              </li>
+              <li class="nav__item">
+                <a href="#story" class="nav__link">Story</a>
+              </li>
+              <li class="nav__item">
+                <a href="#features" class="nav__link">Works</a>
+              </li>
+              <li class="nav__item">
+                <a href="#articles" class="nav__link">Articles</a>
+              </li>
+              <li class="nav__item">
+                <a href="#form" class="nav__link">Form</a>
+              </li>
+            </ul>
+
+            <ul class="nav__reference">
+              <li class="nav__item">
+                <a href="#" class="nav__link">Visit My Twitter</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Visit My Linkedin</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Visit My Github</a>
+              </li>
+            
+            </ul>
+          </div>  
+        </nav>
+      </div>
 
       <div class="header__nav-container">
         <a href="#" class="header__anchor">
-          <span class="header__bg"></span>
+          <span class="header"></span>
           <span class="header__nav">&nbsp;</span>
         </a>
       </div>
-    </section>
+    </nav>
 
-      <div class="ul-nav">
-        <ul class="ul__ul">
-          <li class="ul__li"><a href="#intro" class="ul__links">Intoduction</a></li>
-          <li class="ul__li"><a href="#story" class="ul__links">Story</a></li>
-          <li class="ul__li"><a href="#features" class="ul__links">Works</a></li>
-          <li class="ul__li"><a href="#articles" class="ul__links">Articles</a></li>
-          <li class="ul__li"><a href="#form" class="ul__links">Form</a></li>
-        </ul>
-        </div>
-   
-      
     <aside class="side-nav">
       <figure class="side-nav__icons">
         <a href="#" class="side-nav__anchor">
@@ -380,7 +441,7 @@
             class="form__input form__input-name"
           />
 
-          <label id="label-2"  for="message">Message</label>
+          <label id="label-2" for="message">Message</label>
           <textarea
             name="message"
             id="message"
@@ -431,5 +492,4 @@
 
     <script src="scripts.js"></script>
   </body>
- 
 </html>

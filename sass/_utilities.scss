@@ -54,20 +54,6 @@ $mg-20: 10rem;
   margin-right: 2vw;
 }
 
-@mixin head-list-nav-aniamte {
-  @media only screen and (hover: hover) {
-    &:hover {
-      color: $color-white;
-      &::before {
-        background-color: rgba($color-primary-1, 0.8);
-        border-radius: 2px;
-        transform: scaleY(1.8);
-        height: 55%;
-        width: 130.5%;
-    }
-    
-  }
-}}
 
 @mixin text-scale($transform) {
   transition: 0.4s;

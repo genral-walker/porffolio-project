@@ -1,6 +1,20 @@
 //////////// JS ANIMATION ////////////
 
+// Animation for the page section //
+.nav-drop {
+  .dropdown {
+    &__li { @for $i from 1 to 6 {
+      display: block;
+      &:nth-of-type(#{$i}) {
+        animation: nav-drop 0.55s (150ms * $i) - 200 ease-in-out forwards;
+      }
+    }}
+   
+  }
+}  
 
+
+// Hover effect for the hamburger //
 .anchor-hover {
   @media only screen and (hover: hover) {
     &:hover {
@@ -40,49 +54,59 @@
   }
 }
 
+
+// Effect that happens when Hamburger is clicked //
 .nav-rotate {
-    background-color: transparent;
-    &::before {
-        background-color: $color-white;
-      transform: rotate(135deg);
-      bottom: 0;
-    }
-  
-    &::after {
-        background-color: $color-white;
-      transform: rotate(-135deg);
-      top: 0;
-    }
+  background-color: transparent;
+  &::before {
+    background-color: $color-white;
+    transform: rotate(135deg);
+    bottom: 0;
   }
 
-  .bg-show {
-   transform: scale(150);
-   visibility: visible;
+  &::after {
+    background-color: $color-white;
+    transform: rotate(-135deg);
+    top: 0;
+  }
+}
+
+// The Scale Backgroumd, Happens after Hmaburger is clicked //
+.bg-show {
+  transform: scale(150);
+  visibility: visible;
 }
 
 .color-primary {
-  transition: .5s;
+  transition: 0.5s;
   color: $color-primary-1;
 }
 
-  ////////////// CSS KEYFRAMES /////////////
-  @keyframes pulsate {
-    0% {
-        transform: scale(1);
-        box-shadow: none;
-    }
-
-    50% {
-        transform: scale(1.05);
-        box-shadow: 0 1rem 3rem rgba(224, 36, 36, 0.411);
-    }
-
-    100% {
-        transform: scale(1);
-        box-shadow: none;
-    }
+////////////// CSS KEYFRAMES /////////////
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 1rem 3rem rgba(224, 36, 36, 0.411);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: none;
+  }
 }
 
-@keyframes li-nav-animate {
-  
+@keyframes nav-drop {
+  0% {
+    transform: scale(0.3) translateY(-40px);
+  }
+  80% {
+    transform: scale(1.2) translateY(4px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
 }
