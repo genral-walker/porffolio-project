@@ -53,7 +53,22 @@ $mg-20: 10rem;
 @mixin margin-right {
   margin-right: 2vw;
 }
-
+@mixin icon-adjust($position) {
+  @if $position = before {
+    top: -0.7rem;
+    //////// 400px ///////
+    @media only screen and (max-width: 25em) {
+      top: -0.8rem;
+    }
+  }
+  @if $position != before {
+    top: 0.7rem;
+    //////// 400px ///////
+    @media only screen and (max-width: 25em) {
+      top: 0.8rem;
+    }
+  }
+}
 
 @mixin text-scale($transform) {
   transition: 0.4s;

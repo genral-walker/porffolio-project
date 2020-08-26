@@ -29,6 +29,10 @@
     }
   }
 
+  /*////////////////*/
+  /*======== DropDown CSS Rules ============*/
+  /*////////////////*/
+
   &__page-navigate {
     text-transform: uppercase;
     font-size: $font-size-sm-1;
@@ -103,10 +107,60 @@
       }
     }
   }
+  /*======== DropDown CSS Rules END ============*/
 
-  &__input {
-    display: none;
+
+ /*////////////////*/
+  /*======== Hamburger Nav CSS Rules ============*/
+  /*////////////////*/
+  
+  .nav {
+
+    &__hamburger {
+      width: min-content;
+      z-index: 300;
+      text-align: center;
+      cursor: pointer;
+    }
+    &__icon {
+      position: relative;
+      width: 3rem;
+      height: 2px;
+      background-color: black;
+      display: inline-block;
+
+      &::before,
+      &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          width: inherit;
+          height: inherit;
+          display: inline-block;
+          background-color: inherit;
+          transition: all .2s;
+      }
+
+      &::before {@include icon-adjust(before)}
+      &::after { @include icon-adjust(after)}
+    }
+    &__bg {
+      position: fixed;
+      top: 50vh;
+      left: 50%;
+      width: 20px;
+      height: 20px;
+      z-index: 200;
+      display: inline-block;
+      border-radius: 50%;
+      background-color: black;
+      transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+    }
   }
+ 
+
+    /*
+ 
 
   &__label {
     z-index: 2000;
@@ -116,10 +170,7 @@
 
   &__span {
     position: relative;
-    width: 3rem;
-    height: 2px;
-    background-color: black;
-    display: inline-block;
+   
 
     &::before,
     &::after {
@@ -151,8 +202,6 @@
       width: 0;
       transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
    
-      &__navigation {
-        }
       .nav-container {
         position: absolute;
         top: 50%;
@@ -187,7 +236,9 @@
         }
       }
     }
+    
   }
+  /*
   &__bg {
     display: inline-block;
     background-image: radial-gradient($color-primary-1, rgb(192, 55, 55));
@@ -255,8 +306,11 @@
         top: 1rem;
       }
     }
-  }
+  } 
+  */ 
+      
 }
+  
 
 .side-nav {
   &__anchor {

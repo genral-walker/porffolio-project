@@ -15,6 +15,7 @@
     <nav class="header" id="intro">
       <a class="header__host" href="#">Local Host</a>
 
+      <!-- Drodown Section -->
       <div class="header__dropdown">
         <button class="header__page-navigate">Navigate Page</button>
 
@@ -37,62 +38,40 @@
         </ul>
       </div>
 
-      <div class="header__nav-contain">
-        <input
-          type="checkbox"
-          class="header__input"
-          id="nav-toggle"
-          name="nav-toggle"
-        />
+      <!-- Hambuger Nav Section -->
+      <div class="nav">
 
-        <label for="nav-toggle" class="header__label">
-          <span class="header__span"></span>
-        </label>
+        <div for="nav-toggle" class="nav__hamburger">
+          <span class="nav__icon"></span>
+        </div>
 
-        <div class="header__bg">&nbsp;</div>
+        <div class="nav__bg">&nbsp;</div>
 
-        <nav class="nav">
+        <div class="nav-content">
 
-          <div class="nav__container">
-            <ul class="nav__drop">
-              <li class="nav__item">
-                <a href="#intro" class="nav__link">Intoduction</a>
+            <ul class="nav-content__reference">
+              <li class="nav-content__item">
+                <a href="#" class="nav-content__link">
+                  <img src="assets/images/twitter.svg" alt="Twitter Icon">
+                  Visit My Twitter
+                </a>
               </li>
-              <li class="nav__item">
-                <a href="#story" class="nav__link">Story</a>
+              <li class="nav-content__item">
+                <a href="#" class="nav-content__link">
+                  <img src="assets/images/linkedin.svg" alt="Linkedin Icon">
+                  Visit My Linkedin
+                </a>
               </li>
-              <li class="nav__item">
-                <a href="#features" class="nav__link">Works</a>
-              </li>
-              <li class="nav__item">
-                <a href="#articles" class="nav__link">Articles</a>
-              </li>
-              <li class="nav__item">
-                <a href="#form" class="nav__link">Form</a>
+              <li class="nav-content__item">
+                <a href="#" class="nav-content__link">
+                  <img src="assets/images/github.svg" alt="Github Icon">
+                  Visit My Github
+                </a>
               </li>
             </ul>
 
-            <ul class="nav__reference">
-              <li class="nav__item">
-                <a href="#" class="nav__link">Visit My Twitter</a>
-              </li>
-              <li class="nav__item">
-                <a href="#" class="nav__link">Visit My Linkedin</a>
-              </li>
-              <li class="nav__item">
-                <a href="#" class="nav__link">Visit My Github</a>
-              </li>
-            
-            </ul>
-          </div>  
-        </nav>
-      </div>
+        </div>  
 
-      <div class="header__nav-container">
-        <a href="#" class="header__anchor">
-          <span class="header"></span>
-          <span class="header__nav">&nbsp;</span>
-        </a>
       </div>
     </nav>
 

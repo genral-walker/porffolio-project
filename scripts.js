@@ -1,12 +1,12 @@
 
 ///// Header Nav Animation /////
 const nav = document.querySelector('.header__anchor');
-const innerNav = document.querySelector('.header__nav');
+// const innerNav = document.querySelector('.header__nav');
 
-nav.addEventListener('click', () => {
-    innerNav.classList.toggle('nav-rotate');
-    document.querySelector('.header__bg').classList.toggle('bg-show');
-});
+// nav.addEventListener('click', () => {
+//     innerNav.classList.toggle('nav-rotate');
+//     document.querySelector('.header__bg').classList.toggle('bg-show');
+// });
 
 
 

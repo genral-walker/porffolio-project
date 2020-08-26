@@ -5,6 +5,10 @@
   padding: 0;
   box-sizing: inherit;
 }
+*::selection {
+  background-color: rgba($color-primary-1, .8);
+  color: $color-white;
+}
 
 html {
   font-size: 62.5%; //this is 10px = 1rem.
