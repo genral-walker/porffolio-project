@@ -73,13 +73,13 @@
       position: relative;
       perspective: 300px;
       position: absolute;
-      top: 7rem;
+      top: $mg-17;
     }
     &__li {
       background-color: rgba($color-primary-1, 0.85);
       width: 95%;
-      display: block;
-      padding: 1rem;
+      padding: $mg-3;
+      margin-left: $mg-1;
       display: none;
       opacity: 0;
       color: $color-white;
@@ -92,7 +92,7 @@
         position: absolute;
         height: 3px;
         transform-origin: left;
-        top: 3.5rem;
+        top: $mg-12;
         width: 1%;
         transition: 1s;
       }
@@ -109,17 +109,16 @@
   }
   /*======== DropDown CSS Rules END ============*/
 
-
- /*////////////////*/
+  /*////////////////*/
   /*======== Hamburger Nav CSS Rules ============*/
   /*////////////////*/
-  
-  .nav {
 
+  .nav {
     &__hamburger {
       width: min-content;
+      display: block;
+      position: relative;
       z-index: 300;
-      text-align: center;
       cursor: pointer;
     }
     &__icon {
@@ -131,18 +130,22 @@
 
       &::before,
       &::after {
-          content: "";
-          position: absolute;
-          left: 0;
-          width: inherit;
-          height: inherit;
-          display: inline-block;
-          background-color: inherit;
-          transition: all .2s;
+        content: "";
+        position: absolute;
+        left: 0;
+        width: inherit;
+        height: inherit;
+        display: inline-block;
+        background-color: inherit;
+        transition: all 0.2s;
       }
 
-      &::before {@include icon-adjust(before)}
-      &::after { @include icon-adjust(after)}
+      &::before {
+        @include icon-adjust(before);
+      }
+      &::after {
+        @include icon-adjust(after);
+      }
     }
     &__bg {
       position: fixed;
@@ -150,71 +153,80 @@
       left: 50%;
       width: 20px;
       height: 20px;
+      /*
+      visibility: hidden;
+      */
+      /////FOR EXPERIMENT PURPOSES
+      transform: scale(80);
+      /////////////////
       z-index: 200;
-      display: inline-block;
       border-radius: 50%;
-      background-color: black;
-      transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+      background-color: $color-primary-1;
+      transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
     }
-  }
- 
-
-    /*
- 
-
-  &__label {
-    z-index: 2000;
-    text-align: center;
-    cursor: pointer;
-  }
-
-  &__span {
-    position: relative;
-   
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      width: inherit;
-      height: inherit;
-      background-color: inherit;
-      display: inherit;
-      left: 0;
-      transition: bottom 0.2s, transform 0.4s;
-    }
-
-    &::before {
-      top: -0.8rem;
-    }
-    &::after {
-      top: 0.8rem;
-    }
-
-    .nav {
+    .nav-content {
       height: 100vh;
-      background-color: green;
       position: fixed;
+      width: 100%;
       top: 0;
       left: 0;
-      z-index: 1500;
-      opacity: 0;
-      width: 0;
-      transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-   
-      .nav-container {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+      z-index: 250;
 
+      /*
+      
+      opacity: 0;
+      width: 0; 
+      */
+      transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+      &__reference {
+        position: relative;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        width: max-content;
+        color: $color-white;
+        
+      }
+      &__item {
+        margin: $mg-11;
+        font-size: $font-size-md-1;
+      }
+      &__link {
+        display: flex;
+        align-items: center;
+        perspective: 30rem;
+      }
+      &__icon {
+        width: 3.5rem;
+        color: $color-white;
+        @include responsive(hover) {
+          animation: none;
+        }
+        &--1 {
+          animation: rotateInfinite infinite 4.5s ease-in-out 1s;
+        }
+        &--2 {
+          animation: rotateInfinite infinite 4.5s ease-in-out 1.4s;
+        }
+        &--3 {
+          animation: rotateInfinite infinite 4.5s ease-in-out 1.7s;
+        }
+        
+      }
+      &__text {
+        margin-left: $mg-13;
+        letter-spacing: 2px;
+        transition: transform .5s cubic-bezier(1,-0.03, 0,-0.65);
+        @include responsive(hover) {
+          transform: translateX(15px);
+        }
       }
     }
+  }
 
-    &__anchor {
-      display: inline-block;
-      height: 3rem;
-
+  /*     
       &:focus {
         .header__nav {
           background-color: transparent;
@@ -238,79 +250,8 @@
     }
     
   }
-  /*
-  &__bg {
-    display: inline-block;
-    background-image: radial-gradient($color-primary-1, rgb(192, 55, 55));
-    position: fixed;
-    height: 6rem;
-    width: 6rem;
-    border-radius: 50%;
-    left: 50%;
-    top: 50vh;
-    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
-  }
-  &__nav {
-    display: inline-block;
-    position: relative;
-    z-index: 150;
-    top: 1.2rem;
-    background-color: black;
-    width: 3rem;
-    height: 2px;
-    transition: 0.2s, transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
-
-    //////// 250px ///////
-    @media only screen and (max-width: 15.625em) {
-      width: 4rem;
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-color: black;
-      left: 0;
-      bottom: 0.7rem;
-      transition: bottom 0.2s, transform 0.4s;
-
-      //////// 400px ///////
-      @media only screen and (max-width: 25em) {
-        bottom: 0.85rem;
-      }
-
-      //////// 350px ///////
-      @media only screen and (max-width: 21.875em) {
-        bottom: 1rem;
-      }
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-color: black;
-      top: 0.65rem;
-      left: 0;
-      transition: top 0.2s, transform 0.4s;
-
-      //////// 900px ///////
-      @media only screen and (max-width: 56.25em) {
-        top: 0.75rem;
-      }
-
-      //////// 350px ///////
-      @media only screen and (max-width: 21.875em) {
-        top: 1rem;
-      }
-    }
-  } 
-  */ 
-      
+  */
 }
-  
 
 .side-nav {
   &__anchor {

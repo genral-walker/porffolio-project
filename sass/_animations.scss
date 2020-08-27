@@ -3,16 +3,16 @@
 // Animation for the page section //
 .nav-drop {
   .dropdown {
-    &__li { @for $i from 1 to 6 {
-      display: block;
-      &:nth-of-type(#{$i}) {
-        animation: nav-drop 0.55s (150ms * $i) - 200 ease-in-out forwards;
+    &__li {
+      @for $i from 1 to 6 {
+        display: block;
+        &:nth-of-type(#{$i}) {
+          animation: nav-drop 0.55s (150ms * $i) - 200 ease-in-out forwards;
+        }
       }
-    }}
-   
+    }
   }
-}  
-
+}
 
 // Hover effect for the hamburger //
 .anchor-hover {
@@ -54,7 +54,6 @@
   }
 }
 
-
 // Effect that happens when Hamburger is clicked //
 .nav-rotate {
   background-color: transparent;
@@ -71,10 +70,18 @@
   }
 }
 
-// The Scale Backgroumd, Happens after Hmaburger is clicked //
-.bg-show {
-  transform: scale(150);
-  visibility: visible;
+// The Scale Backgroumd and the content appears Happens after Hmaburger is clicked //
+.second-nav-show {
+  .nav {
+    &__bg {
+      visibility: visible;
+      transform: scale(80);
+    }
+    &__nav-content {
+      &__reference {
+      }
+    }
+  }
 }
 
 .color-primary {
@@ -108,5 +115,17 @@
   100% {
     transform: scale(1) translateY(0);
     opacity: 1;
+  }
+}
+
+@keyframes rotateInfinite {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotate(0);
   }
 }

@@ -42,6 +42,17 @@ $mg-20: 10rem;
 
 /////////////////////////////////////
 ////////// MIXINS
+@mixin responsive($condition) {
+  @if $condition = hover {
+    @media only screen and (hover: hover) {
+      &:hover {
+        @content;
+      }
+    }
+  }
+  
+}
+
 @mixin space-l {
   letter-spacing: 0.5px;
 }
