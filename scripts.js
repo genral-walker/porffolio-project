@@ -1,16 +1,19 @@
 
 ///// Header Nav Animation /////
-const nav = document.querySelector('.header__anchor');
-// const innerNav = document.querySelector('.header__nav');
+const nav = document.querySelector('.nav__hamburger');
+const innerNav = document.querySelector('.nav__icon'); 
+const bgNav = document.querySelector('.nav-content'); 
+const bgNavItems = document.querySelector('.nav-content__ul');
 
-// nav.addEventListener('click', () => {
-//     innerNav.classList.toggle('nav-rotate');
-//     document.querySelector('.header__bg').classList.toggle('bg-show');
-// });
+ nav.addEventListener('click', () => {
+     innerNav.classList.toggle('hamburger-rotate');
+     bgNav.classList.toggle('show');
+     bgNavItems.classList.toggle('show');
+ });
 
 
 
-////// From Label Color Change //////
+////// From Label Color Change on Focus //////
 const inputName = document.querySelector('#label-1');
 document.querySelector('.form__input-name').addEventListener('focusin', () => {
     inputName.classList.add('color-primary');

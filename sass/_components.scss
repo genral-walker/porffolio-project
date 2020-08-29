@@ -36,35 +36,26 @@
   &__page-navigate {
     text-transform: uppercase;
     font-size: $font-size-sm-1;
-    border: none;
     color: transparent;
     background-color: black;
     background-clip: text;
     font-weight: bold;
-    border-radius: 5px;
     position: relative;
     top: 0.2rem;
     cursor: pointer;
+    @extend %button-set;
+    padding: .7rem 1.3rem;
     transition: 0.3s;
-    animation: pulsate 0.7s 8;
 
     //////// 230px ///////
     @media only screen and (max-width: 14.375em) {
       font-size: $font-size-sm-2;
     }
-
-    @media only screen and (hover: hover) {
-      &:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 15px rgba(54, 44, 44, 0.202);
-      }
-    }
-    &:focus {
-      color: $color-primary-1;
-      transform: translateY(0);
-      box-shadow: none;
+    @include btn-animate;
+    &:active,
+    &:focus { 
       outline: none;
-      animation: none;
+      background-color: $color-primary-1;
     }
   }
   .dropdown {
@@ -74,12 +65,13 @@
       perspective: 300px;
       position: absolute;
       top: $mg-17;
+      margin-left: $mg-6;
     }
     &__li {
       background-color: rgba($color-primary-1, 0.85);
       width: 95%;
       padding: $mg-3;
-      margin-left: $mg-1;
+      
       display: none;
       opacity: 0;
       color: $color-white;
@@ -107,19 +99,20 @@
       }
     }
   }
-  /*======== DropDown CSS Rules END ============*/
+  //////////// DropDown CSS Rules END //////////////
 
-  /*////////////////*/
-  /*======== Hamburger Nav CSS Rules ============*/
-  /*////////////////*/
+  ////////////////////
+  ////////// Hamburger Nav CSS Rules //////////////
+  ////////////////////
 
   .nav {
     &__hamburger {
       width: min-content;
-      display: block;
       position: relative;
       z-index: 300;
+      margin-top: $mg-3;
       cursor: pointer;
+      
     }
     &__icon {
       position: relative;
@@ -137,7 +130,7 @@
         height: inherit;
         display: inline-block;
         background-color: inherit;
-        transition: all 0.2s;
+        transition: background-color .9s, transform .5s, top .25s;
       }
 
       &::before {
@@ -147,23 +140,6 @@
         @include icon-adjust(after);
       }
     }
-    &__bg {
-      position: fixed;
-      top: 50vh;
-      left: 50%;
-      width: 20px;
-      height: 20px;
-      /*
-      visibility: hidden;
-      */
-      /////FOR EXPERIMENT PURPOSES
-      transform: scale(80);
-      /////////////////
-      z-index: 200;
-      border-radius: 50%;
-      background-color: $color-primary-1;
-      transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
-    }
     .nav-content {
       height: 100vh;
       position: fixed;
@@ -171,86 +147,103 @@
       top: 0;
       left: 0;
       z-index: 250;
-
-      /*
-      
-      opacity: 0;
-      width: 0; 
-      */
-      transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-
-      &__reference {
+      background-color: $color-primary-1;
+      clip-path: circle(1px at 52% 50%);
+      visibility: hidden;
+      transition: clip-path 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    
+      &__ul {
         position: relative;
         top: 40%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -300%);
         text-align: center;
         width: max-content;
         color: $color-white;
-        
+        transition: transform .6s .4s cubic-bezier(0.44,-0.51, 0, 1.91);
+        @include responsive(500px) {
+          top: 37%;
+          left: 48%;
+        }
+        @include responsive(300px) {
+          top: 33%;
+          left: 51%;
+        }
+        @include responsive(250px) {
+          top: 30%;
+        }
       }
       &__item {
         margin: $mg-11;
         font-size: $font-size-md-1;
+        @include responsive(350px) {
+          margin-bottom: $mg-15;
+        }
+        @include responsive(300px) {
+          font-size: 2.7rem;
+        }
+        @include responsive(230px) {
+          font-size: 2.3rem;
+        }
       }
       &__link {
         display: flex;
         align-items: center;
         perspective: 30rem;
+        @include responsive(hover) {
+          .nav-content {
+            &__icon {
+              animation: none;
+            }
+            &__text {
+              transform: translateX(15px);
+            }
+          }
+        }
       }
       &__icon {
-        width: 3.5rem;
+        width: 4rem;
         color: $color-white;
-        @include responsive(hover) {
-          animation: none;
+        &:focus {
+          .nav__icon {
+            background-color: transparent;
+            &::before {
+              top: 0;
+              background-color: $color-primary-1;
+            }
+            &::after {
+              top: 0;
+              background-color: $color-primary-1;
+            }
+          }
+        }
+        @include responsive(230px) {
+          width: 3.5rem;
         }
         &--1 {
-          animation: rotateInfinite infinite 4.5s ease-in-out 1s;
+          animation: rotateInfinite infinite 4.5s ease-in-out 4s;
         }
         &--2 {
-          animation: rotateInfinite infinite 4.5s ease-in-out 1.4s;
+          animation: rotateInfinite infinite 4.5s ease-in-out 4.4s;
         }
         &--3 {
-          animation: rotateInfinite infinite 4.5s ease-in-out 1.7s;
+          animation: rotateInfinite infinite 4.5s ease-in-out 4.7s;
         }
-        
       }
       &__text {
         margin-left: $mg-13;
         letter-spacing: 2px;
-        transition: transform .5s cubic-bezier(1,-0.03, 0,-0.65);
-        @include responsive(hover) {
-          transform: translateX(15px);
+        transition: transform 0.5s cubic-bezier(1, -0.03, 0, -0.65);
+        @include responsive(300px) {
+          margin-left: $mg-10;
+        }
+        @include responsive(230px) {
+          margin-left: $mg-6;
         }
       }
     }
   }
 
-  /*     
-      &:focus {
-        .header__nav {
-          background-color: transparent;
-          &::before {
-            bottom: 0;
-            background-color: $color-primary-1;
-          }
-
-          &::after {
-            top: 0;
-            background-color: $color-primary-1;
-          }
-        }
-      }
-
-      @media only screen and (hover: hover) {
-        &:hover {
-          cursor: pointer;
-        }
-      }
-    }
-    
-  }
-  */
 }
 
 .side-nav {

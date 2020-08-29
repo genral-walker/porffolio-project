@@ -13,10 +13,11 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   grid-row: 1/ 2;
   grid-column: center-start / center-end;
-  padding: 3rem 0 1rem;
+  padding: $mg-2 0;
   font-size: $font-size-md-3;
 }
 

@@ -14,74 +14,42 @@
   }
 }
 
-// Hover effect for the hamburger //
-.anchor-hover {
-  @media only screen and (hover: hover) {
-    &:hover {
-      .header__nav {
-        background-color: $color-primary-1;
-        &::before {
-          bottom: 0.95rem;
-          background: inherit;
-
-          //////// 400px ///////
-          @media only screen and (max-width: 25em) {
-            bottom: 1.1rem;
-          }
-
-          //////// 350px ///////
-          @media only screen and (max-width: 21.875em) {
-            bottom: 1.25rem;
-          }
-        }
-
-        &::after {
-          top: 0.9rem;
-          background-color: inherit;
-
-          //////// 700px ///////
-          @media only screen and (max-width: 43.75em) {
-            top: 1rem;
-          }
-
-          //////// 350px ///////
-          @media only screen and (max-width: 21.875em) {
-            top: 1.25rem;
-          }
-        }
+// Hover effect for the hamburger // /*
+.hamburger-hover {
+  @include responsive(hover) {
+    .nav__icon {
+      &::before {
+        top: -1rem;
+      }
+      &::after {
+        top: 1rem;
       }
     }
   }
-}
+} 
 
 // Effect that happens when Hamburger is clicked //
-.nav-rotate {
-  background-color: transparent;
+.hamburger-rotate {
+  background-color: transparent !important;
   &::before {
-    background-color: $color-white;
+    background-color: $color-white !important;
     transform: rotate(135deg);
-    bottom: 0;
+    top: 0 !important;
   }
 
   &::after {
-    background-color: $color-white;
+    background-color: $color-white !important;
     transform: rotate(-135deg);
-    top: 0;
+    top: 0 !important;
   }
 }
 
-// The Scale Backgroumd and the content appears Happens after Hmaburger is clicked //
-.second-nav-show {
-  .nav {
-    &__bg {
-      visibility: visible;
-      transform: scale(80);
-    }
-    &__nav-content {
-      &__reference {
-      }
-    }
-  }
+.nav-content.show {
+  visibility: visible !important;
+  clip-path: circle(1000px at 52% 50%) !important;
+}
+.nav-content__ul.show {
+  transform: translate(-50%, -50%) !important;
 }
 
 .color-primary {

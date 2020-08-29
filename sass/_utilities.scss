@@ -19,8 +19,8 @@ $font-size-sm-2: 1.3rem;
 $font-size-sm-3: 1.13rem;
 
 /////////MARGINS AND PADDINGS /////////
-$mg-1: 0.5rem;
-$mg-2: 0.8rem;
+$mg-1: .5rem;
+$mg-2: .8rem;
 $mg-3: 1rem;
 $mg-4: 1.3rem;
 $mg-5: 1.5rem;
@@ -42,15 +42,51 @@ $mg-20: 10rem;
 
 /////////////////////////////////////
 ////////// MIXINS
+
 @mixin responsive($condition) {
-  @if $condition = hover {
-    @media only screen and (hover: hover) {
-      &:hover {
-        @content;
-      }
-    }
+  @if $condition == hover {
+    @media only screen and (hover: hover) { &:hover { @content }; };
   }
-  
+  @if $condition == 700px {
+    //////// 700px ///////
+    @media only screen and (max-width: 43.75em) { @content };
+  }
+  @if $condition == 500px {
+    //////// 500px ///////
+    @media only screen and (max-width: 31.25em) { @content };
+  }
+  @if $condition == 400px {
+    //////// 400px ///////
+    @media only screen and (max-width: 25em) { @content };
+  }
+  @if $condition == 350px {
+    //////// 350px /////// 
+    @media only screen and (max-width: 21.875em) { @content };
+ }
+  @if $condition == 300px {
+    //////// 300px ///////
+    @media only screen and (max-width: 18.75em) { @content };
+  }
+  @if $condition == 260px {
+    //////// 260px /////// 
+  @media only screen and (max-width: 16.25em) { @content };
+  }
+  @if $condition == 250px {
+    //////// 250px ///////
+  @media only screen and (max-width: 15.625em) { @content };
+  }
+  @if $condition == 230px {
+    //////// 230px ///////
+    @media only screen and (max-width: 14.375em) { @content };
+  }
+  @if $condition == 220px {
+    //////// 220px ///////
+    @media only screen and (max-width: 13.75em) { @content };
+  }
+  @if $condition == 210px {
+    //////// 210px ///////
+    @media only screen and (max-width: 13.125em) { @content };
+  }
 }
 
 @mixin space-l {
@@ -65,17 +101,15 @@ $mg-20: 10rem;
   margin-right: 2vw;
 }
 @mixin icon-adjust($position) {
-  @if $position = before {
+  @if $position == before {
     top: -0.7rem;
-    //////// 400px ///////
-    @media only screen and (max-width: 25em) {
+    @include responsive(400px) {
       top: -0.8rem;
     }
   }
   @if $position != before {
     top: 0.7rem;
-    //////// 400px ///////
-    @media only screen and (max-width: 25em) {
+    @include responsive(400px) {
       top: 0.8rem;
     }
   }
@@ -133,13 +167,13 @@ $mg-20: 10rem;
       box-shadow: 0 8px 15px rgba(36, 35, 35, 0.308);
       background-position: 100%;
 
-      @if $btn-color = redd {
+      @if $btn-color == redd {
         border-color: $color-primary-1;
       }
     }
-
+    &:active,
     &:focus {
-      transform: translateY(0) scale(0.94);
+      transform: translateY(0) scale(1);
       box-shadow: none;
     }
   }
