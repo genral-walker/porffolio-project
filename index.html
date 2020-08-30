@@ -39,18 +39,17 @@
       </div>
 
       <!-- Hambuger Nav Section -->
-      <div class="nav">
-        <div class="nav__hamburger hamburger-hover">
-          <span class="nav__icon"></span>
-        </div>
+      <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
 
-        <!-- Just A space. Does nothing but makes the nav align in one straight line -->
-        <div>&nbsp;</div>
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+        </label>
 
-        <div class="nav-content">
-          <ul class="nav-content__ul">
-            <li class="nav-content__item">
-              <a href="#" class="nav-content__link">
+        <nav class="navigation__nav">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">
                 <img
                   src="assets/images/twitter.svg"
                   class="nav-content__icon nav-content__icon--1"
@@ -59,8 +58,8 @@
                 <span class="nav-content__text">Visit My Twitter</span>
               </a>
             </li>
-            <li class="nav-content__item">
-              <a href="#" class="nav-content__link">
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">
                 <img
                   src="assets/images/linkedin.svg"
                   class="nav-content__icon nav-content__icon--2"
@@ -69,8 +68,8 @@
                 <span class="nav-content__text">Visit My Linkedin</span>
               </a>
             </li>
-            <li class="nav-content__item">
-              <a href="#" class="nav-content__link">
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">
                 <img
                   src="assets/images/github.svg"
                   class="nav-content__icon nav-content__icon--3"
@@ -79,9 +78,11 @@
                 <span class="nav-content__text">Visit My Github</span>
               </a>
             </li>
-          </ul>
-        </div>
-      </div>
+          </ul> 
+                
+                 
+        </nav>
+    </div>
     </nav>
 
     <aside class="side-nav">
@@ -481,3 +482,4 @@
     <script src="scripts.js"></script>
   </body>
 </html>
+
