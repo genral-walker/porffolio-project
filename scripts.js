@@ -1,16 +1,18 @@
 
-///// Header Nav Animation /////
-const nav = document.querySelector('.nav__hamburger');
-const innerNav = document.querySelector('.nav__icon'); 
-const bgNav = document.querySelector('.nav-content'); 
-const bgNavItems = document.querySelector('.nav-content__ul');
+////// Page Section Navigate DropDown //////
+document.querySelector('.header__page-navigate').addEventListener('click', () => {
+    document.querySelector('.header__page-navigate').style.animation = 'none';
+    document.querySelector('.dropdown__ul').classList.toggle('nav-drop');
+});
 
- nav.addEventListener('click', () => {
-     innerNav.classList.toggle('hamburger-rotate');
-     bgNav.classList.toggle('show');
-     bgNavItems.classList.toggle('show');
- });
-
+for (let i = 0; i < 5; i++) {
+    document.querySelectorAll('.dropdown__li')[i].addEventListener('click', () => {
+        setTimeout(() => {
+            document.querySelector('.dropdown__ul').classList.remove('nav-drop');
+        }, 2500);
+    });
+    
+}
 
 
 ////// From Label Color Change on Focus //////
@@ -34,24 +36,3 @@ document.querySelector('.form__input-message').addEventListener('focusout', () =
         inputMessage.classList.remove('color-primary');
         }, 700);
 });
-
-
-
-
-////// Page Section Navigate DropDown //////
-document.querySelector('.header__page-navigate').addEventListener('click', () => {
-    document.querySelector('.header__page-navigate').style.animation = 'none';
-    document.querySelector('.dropdown__ul').classList.toggle('nav-drop');
-});
-
-for (let i = 0; i < 5; i++) {
-    document.querySelectorAll('.dropdown__li')[i].addEventListener('click', () => {
-        setTimeout(() => {
-            document.querySelector('.dropdown__ul').classList.remove('nav-drop');
-        }, 2500);
-    });
-    
-}
-
-
-

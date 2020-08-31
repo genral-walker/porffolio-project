@@ -34,17 +34,17 @@
   /*////////////////*/
 
   &__page-navigate {
+    position: relative;
     text-transform: uppercase;
     font-size: $font-size-sm-1;
     color: transparent;
     background-color: black;
     background-clip: text;
     font-weight: bold;
-    position: relative;
     top: 0.2rem;
     cursor: pointer;
     @extend %button-set;
-    padding: .7rem 1.3rem;
+    padding: 0.7rem 1.3rem;
     transition: 0.3s;
 
     //////// 230px ///////
@@ -53,7 +53,7 @@
     }
     @include btn-animate;
     &:active,
-    &:focus { 
+    &:focus {
       outline: none;
       background-color: $color-primary-1;
     }
@@ -65,13 +65,13 @@
       perspective: 300px;
       position: absolute;
       top: $mg-17;
-      margin-left: $mg-6;
+      margin-left: $mg-7;
     }
     &__li {
       background-color: rgba($color-primary-1, 0.85);
       width: 95%;
       padding: $mg-3;
-      
+
       display: none;
       opacity: 0;
       color: $color-white;
@@ -112,7 +112,6 @@
       z-index: 300;
       margin-top: $mg-3;
       cursor: pointer;
-      
     }
     &__icon {
       position: relative;
@@ -130,7 +129,7 @@
         height: inherit;
         display: inline-block;
         background-color: inherit;
-        transition: background-color .9s, transform .5s, top .25s;
+        transition: background-color 0.9s, transform 0.5s, top 0.25s;
       }
 
       &::before {
@@ -140,70 +139,12 @@
         @include icon-adjust(after);
       }
     }
-    .nav-content {
-      height: 100vh;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      left: 0;
-      z-index: 250;
-      background-color: $color-primary-1;
-      clip-path: circle(1px at 52% 50%);
-      visibility: hidden;
-      transition: 0.8s cubic-bezier(0.86, 0, 0.07, 1);
-    
-      &__ul {
-        position: relative;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%, -300%);
-        text-align: center;
-        width: max-content;
-        color: $color-white;
-        @include responsive(500px) {
-          top: 37%;
-          left: 48%;
-        }
-        @include responsive(300px) {
-          top: 33%;
-          left: 51%;
-        }
-        @include responsive(250px) {
-          top: 30%;
-        }
-      }
-      &__item {
-        margin: $mg-11;
-        font-size: $font-size-md-1;
-        @include responsive(350px) {
-          margin-bottom: $mg-15;
-        }
-        @include responsive(300px) {
-          font-size: 2.7rem;
-        }
-        @include responsive(230px) {
-          font-size: 2.3rem;
-        }
-      }
-      &__link {
-        display: flex;
-        align-items: center;
-        perspective: 30rem;
-        @include responsive(hover) {
-          .nav-content {
-            &__icon {
-              animation: none;
-            }
-            &__text {
-              transform: translateX(15px);
-            }
-          }
-        }
-      }
-      &__icon {
-        width: 4rem;
-        color: $color-white;
-        &:focus {
+  }
+}
+
+/*
+.nav-content {
+   &:focus {
           .nav__icon {
             background-color: transparent;
             &::before {
@@ -215,34 +156,197 @@
               background-color: $color-primary-1;
             }
           }
+        }    
+
+    }
+*/
+
+.navigation {
+  &__checkbox {
+    display: none;
+  }
+
+  &__button {
+    position: relative;
+    z-index: 3000;
+    z-index: 3000;
+    text-align: center;
+    cursor: pointer;
+  }
+  &__icon {
+    position: relative;
+    margin-top: $mg-8;
+
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 2px;
+      background-color: black;
+      display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: top 0.2s, background-color 0.5s, transform 0.5s;
+    }
+
+    &::before {
+      top: -0.8rem;
+    }
+    &::after {
+      top: 0.8rem;
+    }
+  }
+
+  &__nav {
+    height: 100vh;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 250;
+    background-color: $color-primary-1;
+    clip-path: circle(1px at 52% 50%);
+    visibility: hidden;
+    transition: clip-path 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+  }
+
+  &__list {
+    position: absolute;
+    top: 50%;
+    left: 83%;
+    transform: translate(-50%, -300%);
+    list-style: none;
+    text-align: center;
+    width: 100%;
+    transition: transform 0.6s 0.4s cubic-bezier(0.44, -0.51, 0, 1.91);
+  }
+
+  &__item {
+    margin: $mg-4;
+    font-size: $font-size-md-1;
+    @include responsive(350px) {
+      margin-bottom: $mg-15;
+    }
+    @include responsive(300px) {
+      font-size: 2.7rem;
+    }
+    @include responsive(230px) {
+      font-size: 2.3rem;
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: flex;
+      align-items: center;
+      width: max-content;
+      font-weight: 400;
+      padding: $mg-7;
+      color: $color-white;
+      text-decoration: none;
+      text-transform: uppercase;
+      background-image: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 50%,
+        $color-white 50%
+      );
+      background-size: 220%;
+      transition: all 0.4s;
+      perspective: 33rem;
+      &:active {
+        background-position: 100%;
+        color: $color-primary-1;
+      }
+      @include responsive(250px) {
+        padding: 0;
+      }
+      @include responsive(hover) {
+        background-position: 100%;
+        color: $color-primary-1;
+        transform: translateX(15px);
+        .link {
+          &__icon {
+            animation: none;
+          }
         }
+      }
+      .link {
+        &__text {
+          display: inline-block;
+          margin-left: $mg-13;
+          letter-spacing: 2px;@include responsive(300px) {
+            margin-left: $mg-10;
+          }
+          @include responsive(230px) {
+            margin-left: $mg-6;
+          }
+      }
+      &__icon {
+        width: 4.5rem;
+        color: $color-white;
         @include responsive(230px) {
           width: 3.5rem;
         }
         &--1 {
           animation: rotateInfinite infinite 4.5s ease-in-out 4s;
+          -moz-animation: none;
         }
         &--2 {
           animation: rotateInfinite infinite 4.5s ease-in-out 4.4s;
+          -moz-animation: none;
         }
         &--3 {
           animation: rotateInfinite infinite 4.5s ease-in-out 4.7s;
+          -moz-animation: none;
         }
       }
-      &__text {
-        margin-left: $mg-13;
-        letter-spacing: 2px;
-        transition: transform 0.5s cubic-bezier(1, -0.03, 0, -0.65);
-        @include responsive(300px) {
-          margin-left: $mg-10;
-        }
-        @include responsive(230px) {
-          margin-left: $mg-6;
-        }
       }
     }
   }
 
+  &__checkbox:checked ~ &__nav {
+    visibility: visible;
+    clip-path: circle(1000px at 52% 50%);
+  }
+  &__checkbox:checked ~ &__nav &__list {
+    transform: translate(-50%, -50%) !important;
+  }
+  &__checkbox:checked ~ &__button &__icon {
+    &,
+    &::before,
+    &::after {
+      background-color: $color-white;
+    }
+  }
+
+  &__button:hover &__icon::before {
+    top: -1rem;
+  }
+
+  &__button:hover &__icon::after {
+    top: 1rem;
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__button &__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  &__checkbox:checked + &__button &__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
 }
 
 .side-nav {
@@ -569,131 +673,5 @@
       @include btn-animate($btn-color: redd);
       display: block;
     }
-  }
-}
-
-.navigation {
-  &__checkbox {
-      display: none;
-  }
-
-  &__button {
-    position: relative;
-    z-index: 3000; 
-      z-index: 3000;
-      text-align: center;
-      cursor: pointer;
-  }
-
-  &__nav {
-    height: 100vh;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 250;
-    background-color: $color-primary-1;
-    clip-path: circle(1px at 52% 50%);
-    visibility: hidden;
-    transition: clip-path 0.8s cubic-bezier(0.86, 0, 0.07, 1);
-  }
-
-  &__list {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-300%);
-      list-style: none;
-      text-align: center;
-      width: 100%;
-      transition: transform .6s .4s cubic-bezier(0.44,-0.51, 0, 1.91);
-  }
-
-  &__item {
-      margin: 1rem;
-  }
-
-  &__link {
-      &:link,
-      &:visited {
-          display: inline-block;
-          font-size: 3rem;
-          font-weight: 300;
-          padding: 1rem 2rem;
-          color: $color-white;
-          text-decoration: none;
-          text-transform: uppercase;
-          background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
-          background-size: 220%;
-          transition: all .4s;
-
-          span {
-              margin-right: 1.5rem;
-              display: inline-block;
-          }
-      }
-      
-      &:hover,
-      &:active {
-          background-position: 100%;
-          color: $color-primary-1;
-          transform: translateX(1rem);
-      }
-  }
-
-  &__checkbox:checked ~ &__nav {
-  visibility: visible;
-  clip-path: circle(1000px at 52% 50%);
-  }
-  &__checkbox:checked ~ &__nav &__list {
-    transform: translate(-50%, -50%);
-  }
-
-  //ICON
-  &__icon {
-      position: relative;
-      margin-top: 3.5rem;
-
-      &,
-      &::before,
-      &::after {
-          width: 3rem;
-          height: 2px;
-          background-color: grey;
-          display: inline-block;
-      }
-
-      &::before,
-      &::after {
-          content: "";
-          position: absolute;
-          left: 0;
-          transition: all .2s;
-      }
-
-      &::before { top: -.8rem; }
-      &::after { top: .8rem; }
-  }
-
-  &__button:hover &__icon::before {
-      top: -1rem;
-  }
-
-  &__button:hover &__icon::after {
-      top: 1rem;
-  }
-
-  &__checkbox:checked + &__button &__icon {
-      background-color: transparent;
-  }
-
-  &__checkbox:checked + &__button &__icon::before {
-      top: 0;
-      transform: rotate(135deg);
-  }
-
-  &__checkbox:checked + &__button &__icon::after {
-      top: 0;
-      transform: rotate(-135deg);
   }
 }

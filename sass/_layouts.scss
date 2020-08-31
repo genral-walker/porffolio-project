@@ -17,8 +17,13 @@ body {
 
   grid-row: 1/ 2;
   grid-column: center-start / center-end;
-  padding: $mg-2 0;
+  padding: $mg-5 0;
   font-size: $font-size-md-3;
+
+  &__dropdown {
+    margin-left: auto;
+    margin-right: $mg-16;
+  }
 }
 
 .side-nav {
