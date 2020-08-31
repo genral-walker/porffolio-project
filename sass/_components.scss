@@ -218,11 +218,11 @@
   &__list {
     position: absolute;
     top: 50%;
-    left: 83%;
+    left: 50%;
     transform: translate(-50%, -300%);
     list-style: none;
     text-align: center;
-    width: 100%;
+    width: min-content;
     transition: transform 0.6s 0.4s cubic-bezier(0.44, -0.51, 0, 1.91);
   }
 
@@ -263,6 +263,9 @@
       &:active {
         background-position: 100%;
         color: $color-primary-1;
+      }
+      @include responsive(350px) {
+        padding: $mg-1;
       }
       @include responsive(250px) {
         padding: 0;

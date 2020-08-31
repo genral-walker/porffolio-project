@@ -23,6 +23,9 @@ body {
   &__dropdown {
     margin-left: auto;
     margin-right: $mg-16;
+    @include responsive(300px) {
+      margin-right: $mg-7;
+    }
   }
 }
 
