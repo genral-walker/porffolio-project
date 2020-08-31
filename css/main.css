@@ -1469,40 +1469,6 @@ body {
   transition: 0.5s;
   color: #d03c3c; }
 
-@-webkit-keyframes pulsate {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-box-shadow: none;
-            box-shadow: none; }
-  50% {
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05);
-    -webkit-box-shadow: 0 1rem 3rem rgba(224, 36, 36, 0.411);
-            box-shadow: 0 1rem 3rem rgba(224, 36, 36, 0.411); }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-box-shadow: none;
-            box-shadow: none; } }
-
-@keyframes pulsate {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-box-shadow: none;
-            box-shadow: none; }
-  50% {
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05);
-    -webkit-box-shadow: 0 1rem 3rem rgba(224, 36, 36, 0.411);
-            box-shadow: 0 1rem 3rem rgba(224, 36, 36, 0.411); }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-box-shadow: none;
-            box-shadow: none; } }
-
 @-webkit-keyframes nav-drop {
   0% {
     -webkit-transform: scale(0.3) translateY(-40px);

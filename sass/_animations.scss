@@ -19,21 +19,8 @@
   color: $color-primary-1;
 }
 
+
 ////////////// CSS KEYFRAMES /////////////
-@keyframes pulsate {
-  0% {
-    transform: scale(1);
-    box-shadow: none;
-  }
-  50% {
-    transform: scale(1.05);
-    box-shadow: 0 1rem 3rem rgba(224, 36, 36, 0.411);
-  }
-  100% {
-    transform: scale(1);
-    box-shadow: none;
-  }
-}
 
 @keyframes nav-drop {
   0% {
