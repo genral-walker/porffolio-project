@@ -6,15 +6,17 @@ const dropDownLists = document.querySelectorAll('.dropdown__li');
 
 dropDownButton.addEventListener('click', () => {
     dropDownButton.style.animation = 'none';
-    dropDownItem.classList.toggle('nav-drop');
-    dropDownItem.style.animation = 'reverse';
+    dropDownItem.classList.add('nav-drop');
+    setTimeout(() => {
+        dropDownItem.classList.remove('nav-drop');
+    }, 4200);
 });
 
 dropDownLists.forEach(list => {
     list.addEventListener('click', () => {
         setTimeout(() => {
             dropDownItem.classList.remove('nav-drop');
-        }, 2500);
+        }, 1300);
     })
 });
 

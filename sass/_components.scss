@@ -87,15 +87,13 @@
         width: 1%;
         transition: 1s;
       }
-
-      @media only screen and (hover: hover) {
-        &:hover {
+        @include responsive(hover) {
+         
           &::after {
             background-color: $color-white;
             width: 85%;
-          }
+          } 
         }
-      }
     }
   }
   //////////// DropDown CSS Rules END //////////////
@@ -140,25 +138,6 @@
     }
   }
 }
-
-/*
-.nav-content {
-   &:focus {
-          .nav__icon {
-            background-color: transparent;
-            &::before {
-              top: 0;
-              background-color: $color-primary-1;
-            }
-            &::after {
-              top: 0;
-              background-color: $color-primary-1;
-            }
-          }
-        }    
-
-    }
-*/
 
 .navigation {
   &__checkbox {
@@ -296,18 +275,6 @@
         @include responsive(230px) {
           width: 3.5rem;
         }
-        &--1 {
-          animation: rotateInfinite infinite 4.5s ease-in-out 4s;
-          -moz-animation: none;
-        }
-        &--2 {
-          animation: rotateInfinite infinite 4.5s ease-in-out 4.4s;
-          -moz-animation: none;
-        }
-        &--3 {
-          animation: rotateInfinite infinite 4.5s ease-in-out 4.7s;
-          -moz-animation: none;
-        }
       }
       }
     }
@@ -319,6 +286,20 @@
   }
   &__checkbox:checked ~ &__nav &__list {
     transform: translate(-50%, -50%);
+  }
+  &__checkbox:checked ~ &__nav .link__icon {
+    &--1 {
+      animation: rotateInfinite infinite 4s ease-in-out 1.5s;
+      -moz-animation: none;
+    }
+    &--2 {
+      animation: rotateInfinite infinite 4s ease-in-out 1.9s;
+      -moz-animation: none;
+    }
+    &--3 {
+      animation: rotateInfinite infinite 4s ease-in-out 2.3s; 
+      -moz-animation: none;
+    }
   }
   &__checkbox:checked ~ &__button &__icon {
     &,
@@ -350,6 +331,24 @@
     transform: rotate(-135deg);
   }
 }
+
+/*
+ &:focus {
+          .nav__icon {
+            background-color: transparent;
+            &::before {
+              top: 0;
+              background-color: $color-primary-1;
+            }
+            &::after {
+              top: 0;
+              background-color: $color-primary-1;
+            }
+          }
+        }    
+
+    }
+*/ 
 
 .side-nav {
   &__anchor {

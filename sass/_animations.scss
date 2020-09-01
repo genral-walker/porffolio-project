@@ -6,7 +6,7 @@
     &__li {
       @for $i from 1 to 6 {
         &:nth-of-type(#{$i}) {
-          animation: nav-drop 0.55s (150ms * $i) - 200 ease-in-out forwards;
+          animation: nav-drop 0.55s (150ms * $i) - 200 ease-in-out both;
         }
       }
     }
