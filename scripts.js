@@ -7,6 +7,7 @@ const dropDownLists = document.querySelectorAll('.dropdown__li');
 dropDownButton.addEventListener('click', () => {
     dropDownButton.style.animation = 'none';
     dropDownItem.classList.toggle('nav-drop');
+    dropDownItem.style.animation = 'reverse';
 });
 
 dropDownLists.forEach(list => {
