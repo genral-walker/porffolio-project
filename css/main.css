@@ -1402,13 +1402,16 @@ body {
 
 .header.fix {
   position: fixed;
-  width: 100vw;
+  width: 100%;
   padding: 1.3rem 7rem;
   -webkit-box-shadow: 0px 2px 18px #ddd7d7;
           box-shadow: 0px 2px 18px #ddd7d7;
   -webkit-transition: .8s ease;
   -o-transition: .8s ease;
   transition: .8s ease; }
+  @media only screen and (max-width: 43.75em) {
+    .header.fix {
+      padding: 1.3rem 4rem; } }
 
 .nav-drop .dropdown__li:nth-of-type(1) {
   -webkit-animation: nav-drop 0.55s -50ms ease-in-out both;

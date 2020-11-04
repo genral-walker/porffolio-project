@@ -3,10 +3,13 @@
 // NAV FIX HEADER
 .header.fix {
   position: fixed;
-  width: 100vw;
+  width: 100%;
   padding: $mg-4 $mg-17;
   box-shadow: 0px 2px 18px rgb(221, 215, 215);
   transition: .8s ease;
+  @include responsive(700px) {
+    padding: $mg-4 $mg-13;
+  }
 } 
 
 // Animation for the page section //
