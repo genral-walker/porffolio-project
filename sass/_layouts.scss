@@ -5,7 +5,8 @@ body {
     [sidebar-start] minmax(20px, max-content) [sidebar-end
     main-start] repeat(8, [center-start] minmax(max-content, 1fr))
     [center-end] minmax(4.38rem, max-content) [main-end];
-}
+    overflow-x: hidden;
+  }
 
 ////////////////////////////
 //////// NAVIGATIONS (HEAD & SIDE)
