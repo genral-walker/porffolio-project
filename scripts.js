@@ -1,5 +1,13 @@
 
-////// Page Section Navigate DropDown Effects //////
+// ANIMATIONS FOR REST OF PAGE ON SCROLL
+AOS.init({
+    offset: 400,
+    delay: 0,
+    duration: 1200 
+  });
+
+
+////// NAVIGATE PAGE DROPWON CONTENT ANIMATION //////
 const dropDownButton = document.querySelector('.header__page-navigate');
 const dropDownItem = document.querySelector('.dropdown__ul');
 const dropDownLists = document.querySelectorAll('.dropdown__li');
@@ -20,24 +28,34 @@ dropDownLists.forEach(list => {
     })
 });
 
-////// From Label Color Change on Focus //////
-const inputName = document.querySelector('#label-1');
-document.querySelector('.form__input-name').addEventListener('focusin', () => {
-    inputName.classList.add('color-primary');
-});
-document.querySelector('.form__input-name').addEventListener('focusout', () => {
-    setTimeout(() => {
-        inputName.classList.remove('color-primary');
-    }, 700);
 
-});
+////// LABEL COLOR CHANGE ON INPUT FOCUS //////
+const inputName = document.querySelector('.form__input-name');
+const inputMessage = document.querySelector('.form__input-message');
+const lableName = document.querySelector('#label-1');
+const labelMessage = document.querySelector('#label-2');
 
-const inputMessage = document.querySelector('#label-2');
-document.querySelector('.form__input-message').addEventListener('focusin', () => {
-    inputMessage.classList.add('color-primary');
-});
-document.querySelector('.form__input-message').addEventListener('focusout', () => {
-    setTimeout(() => {
-        inputMessage.classList.remove('color-primary');
-    }, 700);
+const changeColor = (parent, elm) => {
+    elm.classList.toggle('color-primary');
+};
+
+inputName.addEventListener('focusin', () => { changeColor(inputName, lableName); });
+inputMessage.addEventListener('focusin', () => { changeColor(inputMessage, labelMessage); })
+
+inputName.addEventListener('focusout', () => { changeColor(inputName, lableName); });
+inputMessage.addEventListener('focusout', () => { changeColor(inputMessage, labelMessage); })
+
+
+//ANIMATIONS AS PER VIEW
+
+// FOR THE HEADER NAV
+const nav = document.querySelector('.header');
+
+window.addEventListener('scroll', () => {
+    const body = document.body.getBoundingClientRect();
+    if (body.y <= -35) {
+        nav.classList.add('fix');
+    } else {
+        nav.classList.remove('fix');
+    }
 });

@@ -8,6 +8,19 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/main.min.css" />
+
+    <!-- AOS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+      integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+      crossorigin="anonymous"
+    ></script>
     <title>Portfolio-Project</title>
   </head>
 
@@ -40,10 +53,10 @@
 
       <!-- Hambuger Nav Section -->
       <div class="navigation">
-        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
 
         <label for="navi-toggle" class="navigation__button">
-            <span class="navigation__icon">&nbsp;</span>
+          <span class="navigation__icon">&nbsp;</span>
         </label>
 
         <nav class="navigation__nav">
@@ -78,14 +91,12 @@
                 <span class="link__text">Visit My Github</span>
               </a>
             </li>
-          </ul> 
-                
-                 
+          </ul>
         </nav>
-    </div>
+      </div>
     </nav>
 
-    <aside class="side-nav">
+    <aside class="side-nav" data-aos="fade-right">
       <figure class="side-nav__icons">
         <a href="#" class="side-nav__anchor">
           <img
@@ -118,23 +129,42 @@
     </aside>
 
     <section class="intro-section">
-      <p class="intro-section__p">Frontend developer ~ Mentor</p>
+      <p class="intro-section__p" data-aos="zoom-in" data-aos-delay="700">
+        Frontend developer ~ Mentor
+      </p>
 
-      <h1 class="intro-section__h1">
+      <h1 class="intro-section__h1" data-aos="zoom-in" data-aos-delay="800">
         Talk is cheap, <br />
         show me the <span class="red">code</span>
       </h1>
 
-      <p class="intro-section__p-2">
+      <p
+        class="intro-section__p-2"
+        data-aos="zoom-in-down"
+        data-aos-anchor-placement="top"
+        data-aos-delay="1000"
+      >
         Hey There, I’m Micheal a frontend developer based in Delta. My super
         power is developing products that make you happy.
       </p>
 
       <div class="intro-section__btn">
-        <a class="intro-section__btn-1" href="#">
+        <a
+          class="intro-section__btn-1"
+          href="#"
+          data-aos="fade-right"
+          data-aos-anchor-placement="top"
+          data-aos-delay="1300"
+        >
           View my work
         </a>
-        <a class="intro-section__btn-2" href="#">
+        <a
+          class="intro-section__btn-2"
+          href="#"
+          data-aos="fade-left"
+          data-aos-anchor-placement="top"
+          data-aos-delay="1300"
+        >
           Hire Me
         </a>
       </div>
@@ -142,46 +172,79 @@
 
     <section class="story" id="story">
       <div class="story__left">
-        <p class="story__left-p1">Meet Me</p>
+        <p
+          class="story__left-p1"
+          data-aos="zoom-in"
+          data-aos-anchor-placement="bottom"
+        >
+          Meet Me
+        </p>
 
-        <h2 class="story__left-h2">
-          <span class="story__left-line">
-            My
-          </span>
+        <h2
+          class="story__left-h2"
+          data-aos="zoom-in"
+          data-aos-delay="100"
+          data-aos-anchor-placement="bottom"
+        >
+          <span class="story__left-line"> My </span>
           Story
         </h2>
 
-        <h3 class="story__left-description-1">
+        <h3
+          class="story__left-description-1"
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom"
+        >
           Brief Desceription
         </h3>
 
-        <p class="story__left-p2">
+        <p
+          class="story__left-p2"
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom"
+        >
           Just incase you missed the header. I’m Micheal a frontend developer
           based in Delta, Nigeria. I have 5 years experience in frontend
           development. When I’m not punching codes on the keyboard, I like to
           tutor and help upcoming developers in Africa
         </p>
 
-        <h3 class="story__left-description-2">
+        <h3
+          class="story__left-description-2"
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom"
+        >
           Education
         </h3>
 
-        <p class="story__left-p3">
+        <p
+          class="story__left-p3"
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom"
+        >
           I’m a Graduate of Computer science from University of Lagos; Lagos,
           Nigeria.
         </p>
 
-        <h3 class="story__left-description-3">
+        <h3
+          class="story__left-description-3"
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom"
+        >
           Skills
         </h3>
 
-        <p class="story__left-p-3">
+        <p
+          class="story__left-p-3"
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom"
+        >
           I’m proficient with the following technologies, HTML, CSS,
           JavaScripts, VUE js and react.
         </p>
       </div>
 
-      <div class="story__right">
+      <div class="story__right" data-aos="fade" data-aos-delay="600">
         <figure class="story__right-images">
           <img
             src="assets/images/blue-shirt-guy.svg"
@@ -200,19 +263,31 @@
 
     <section class="features" id="features">
       <div class="features__words">
-        <p class="features__words-p1">
+        <p
+          class="features__words-p1"
+          data-aos="zoom-in"
+          data-aos-anchor-placement="bottom-center"
+        >
           Portfolio
         </p>
 
-        <h3 class="features__words features__words-h3">
-          <span class="features__words-line">
-            Featured
-          </span>
+        <h3
+          class="features__words features__words-h3"
+          data-aos="zoom-in"
+          data-aos-delay="100"
+          data-aos-anchor-placement="bottom-center"
+        >
+          <span class="features__words-line"> Featured </span>
           Work
         </h3>
       </div>
 
-      <div class="features__box features__box-1">
+      <div
+        class="features__box features__box-1"
+        data-aos="fade-right"
+        data-aos-delay="400"
+        data-aos-anchor-placement="bottom-center"
+      >
         <div class="features__box-words features__box-words-1">
           <h4 class="features__box-h features__box-h-1">
             StealThisLook website design
@@ -238,11 +313,14 @@
         </figure>
       </div>
 
-      <div class="features__box features__box-2">
+      <div
+        class="features__box features__box-2"
+        data-aos="fade-left"
+        data-aos-delay="400"
+        data-aos-anchor-placement="bottom-center"
+      >
         <div class="features__box-words features__box-words-2">
-          <h4 class="features__box-h features__box-h-2">
-            Bikino website
-          </h4>
+          <h4 class="features__box-h features__box-h-2">Bikino website</h4>
           <p class="features__box-p features__box-p-2">
             E-commerce site for fashion brand Bikino
           </p>
@@ -263,7 +341,12 @@
         </figure>
       </div>
 
-      <div class="features__box features__box-3">
+      <div
+        class="features__box features__box-3"
+        data-aos="fade-right"
+        data-aos-delay="400"
+        data-aos-anchor-placement="bottom-center"
+      >
         <div class="features__box-words features__box-words-3">
           <h4 class="features__box-h features__box-h-3">
             Paypal website redesign
@@ -289,7 +372,12 @@
         </figure>
       </div>
 
-      <div class="features__box features__box-4">
+      <div
+        class="features__box features__box-4"
+        data-aos="fade-left"
+        data-aos-delay="400"
+        data-aos-anchor-placement="bottom-center"
+      >
         <div class="features__box-words features__box-words-4">
           <h4 class="features__box-h features__box-h-4">
             Zuri Academy website
@@ -317,16 +405,29 @@
     </section>
 
     <section class="articles" id="articles">
-      <p class="articles__p1">
+      <p
+        class="articles__p1"
+        data-aos="zoom-in"
+        data-aos-anchor-placement="bottom-center"
+      >
         Shalaye
       </p>
 
-      <h2 class="articles__h2">
+      <h2
+        class="articles__h2"
+        data-aos="zoom-in"
+        data-aos-delay="100"
+        data-aos-anchor-placement="bottom-center"
+      >
         <span class="articles__h2-line">Arti</span>cles
       </h2>
 
       <div class="articles__words">
-        <p class="articles__p articles__p-1">
+        <p
+          class="articles__p articles__p-1"
+          data-aos="zoom-out"
+          data-aos-delay="300"
+        >
           Bem Css; Do’s and Dont’s
         </p>
 
@@ -338,7 +439,11 @@
       </div>
 
       <div class="articles__words">
-        <p class="articles__p articles__p-2">
+        <p
+          class="articles__p articles__p-2"
+          data-aos="zoom-out"
+          data-aos-delay="300"
+        >
           Understanding CSS And the mordern web
         </p>
 
@@ -350,7 +455,11 @@
       </div>
 
       <div class="articles__words">
-        <p class="articles__p articles__p-3">
+        <p
+          class="articles__p articles__p-3"
+          data-aos="zoom-out"
+          data-aos-delay="300"
+        >
           Dealing with imposter syndrome as a developer
         </p>
 
@@ -362,7 +471,11 @@
       </div>
 
       <div class="articles__words">
-        <p class="articles__p articles__p-4">
+        <p
+          class="articles__p articles__p-4"
+          data-aos="zoom-out"
+          data-aos-delay="300"
+        >
           Understanding Template literals in Javascript
         </p>
 
@@ -374,29 +487,42 @@
       </div>
     </section>
 
-    <form action="" class="form" id="form">
-      <p class="form__p form__p-1">
+    <form class="form" id="form">
+      <p
+        class="form__p form__p-1"
+        data-aos="zoom-in"
+        data-aos-anchor-placement="bottom-center"
+      >
         Totori me one time
       </p>
 
-      <h2 class="form__h2"><span class="form__h2-line">Get in</span> touch</h2>
+      <h2
+        class="form__h2"
+        data-aos="zoom-in"
+        data-aos-delay="100"
+        data-aos-anchor-placement="bottom-center"
+      >
+        <span class="form__h2-line">Get in</span> touch
+      </h2>
 
       <div class="form__content">
         <div class="form__left">
-          <h3 class="form__h3 form__h3-1">
+          <h3 class="form__h3 form__h3-1" data-aos="fade" data-aos-delay="500">
             Contact Details
           </h3>
 
-          <p class="form__p form__p-2">
+          <p class="form__p form__p-2" data-aos="fade" data-aos-delay="600">
             maylingw@networksolutions.com <br />
-            <span class="form__p form__p-3">(+234) 135-142-8600</span>
+            <span class="form__p form__p-3" data-aos="fade" data-aos-delay="700"
+              >(+234) 135-142-8600</span
+            >
           </p>
 
-          <h3 class="form__h3 form__h3-2">
+          <h3 class="form__h3 form__h3-2" data-aos="fade" data-aos-delay="800">
             Social Media
           </h3>
 
-          <figure>
+          <figure data-aos="fade" data-aos-delay="900">
             <a href="#" class="form__anchors"
               ><img
                 src="assets/images/twitter.svg"
@@ -421,8 +547,12 @@
           </figure>
         </div>
         <div class="form__right">
-          <label id="label-1" for="name">Name</label>
+          <label id="label-1" for="name" data-aos="fade" data-aos-delay="500"
+            >Name</label
+          >
           <input
+            data-aos="fade"
+            data-aos-delay="500"
             type="text"
             name="name"
             id="name"
@@ -430,8 +560,9 @@
             class="form__input form__input-name"
           />
 
-          <label id="label-2" for="message">Message</label>
+          <label id="label-2" for="message" data-aos="fade" data-aos-delay="700">Message</label>
           <textarea
+          data-aos="fade" data-aos-delay="700"
             name="message"
             id="message"
             wrap="soft"
@@ -440,6 +571,7 @@
           ></textarea>
 
           <input
+          data-aos="fade-up" data-aos-delay="900"
             type="submit"
             value="Send"
             required
@@ -450,13 +582,15 @@
     </form>
 
     <footer class="foot">
-      <p class="foot__p">
-        &copy; 
-        <a href="https://github.com/genral-walker" target="_blank">Lukman Sanni</a>
-         2020
+      <p class="foot__p" data-aos="fade-up" data-aos-delay="1100">
+        &copy;
+        <a href="https://github.com/genral-walker" target="_blank"
+          >Lukman Sanni</a
+        >
+        2020
       </p>
 
-      <figure>
+      <figure data-aos="fade-up" data-aos-delay="1300">
         <a href="#" class="foot__anchors"
           ><img
             src="assets/images/twitter.svg"

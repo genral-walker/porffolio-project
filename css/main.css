@@ -96,7 +96,9 @@ body {
   grid-row: 1/ 2;
   grid-column: center-start / center-end;
   padding: 1.5rem 0;
-  font-size: 1.88rem; }
+  font-size: 1.88rem;
+  -webkit-animation: slide-vertical 1.2s .2s;
+          animation: slide-vertical 1.2s .2s; }
   .header__dropdown {
     margin-left: auto;
     margin-right: 6rem; }
@@ -229,6 +231,9 @@ body {
         width: 140%;
         height: 3px; }
     .story__left h3 {
+      width: -webkit-max-content;
+      width: -moz-max-content;
+      width: max-content;
       -webkit-transition: 0.4s;
       -o-transition: 0.4s;
       transition: 0.4s; }
@@ -753,7 +758,7 @@ body {
     -webkit-perspective: 300px;
             perspective: 300px;
     position: absolute;
-    top: 7rem;
+    top: 7.5rem;
     margin-left: 2rem; }
   .header .dropdown__li {
     background-color: rgba(208, 60, 60, 0.85);
@@ -1394,6 +1399,16 @@ body {
           -webkit-box-shadow: none;
                   box-shadow: none; } }
 
+.header.fix {
+  position: fixed;
+  width: 100vw;
+  padding: 1.3rem 7rem;
+  -webkit-box-shadow: 0px 2px 18px #ddd7d7;
+          box-shadow: 0px 2px 18px #ddd7d7;
+  -webkit-transition: .8s ease;
+  -o-transition: .8s ease;
+  transition: .8s ease; }
+
 .nav-drop .dropdown__li:nth-of-type(1) {
   -webkit-animation: nav-drop 0.55s -50ms ease-in-out both;
           animation: nav-drop 0.55s -50ms ease-in-out both; }
@@ -1419,6 +1434,26 @@ body {
   -o-transition: 0.5s;
   transition: 0.5s;
   color: #d03c3c; }
+
+@-webkit-keyframes slide-vertical {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-85%);
+            transform: translateY(-85%); }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1; } }
+
+@keyframes slide-vertical {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-85%);
+            transform: translateY(-85%); }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1; } }
 
 @-webkit-keyframes nav-drop {
   0% {
@@ -1467,4 +1502,3 @@ body {
   100% {
     -webkit-transform: rotateY(0deg);
             transform: rotateY(0deg); } }
-/*# sourceMappingURL=main.css.map */

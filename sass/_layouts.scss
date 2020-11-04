@@ -19,7 +19,7 @@ body {
   grid-column: center-start / center-end;
   padding: $mg-5 0;
   font-size: $font-size-md-3;
-
+  animation: slide-vertical 1.2s .2s;
   &__dropdown {
     margin-left: auto;
     margin-right: $mg-16;
@@ -179,6 +179,7 @@ body {
     }
 
     h3 {
+      width: max-content;
       @extend %h3-set;
       @include text-scale(skewX(15deg));
     }

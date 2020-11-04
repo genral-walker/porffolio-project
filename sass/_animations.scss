@@ -1,5 +1,14 @@
 //////////// JS ANIMATION ////////////
 
+// NAV FIX HEADER
+.header.fix {
+  position: fixed;
+  width: 100vw;
+  padding: $mg-4 $mg-17;
+  box-shadow: 0px 2px 18px rgb(221, 215, 215);
+  transition: .8s ease;
+} 
+
 // Animation for the page section //
 .nav-drop {
   .dropdown {
@@ -20,6 +29,18 @@
 
 
 ////////////// CSS KEYFRAMES /////////////
+
+@keyframes slide-vertical {
+  from {
+    opacity: 0;
+    transform: translateY(-85%);
+  } 
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
 @keyframes nav-drop {
   0% {
