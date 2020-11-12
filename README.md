@@ -1,4 +1,4 @@
-# portfolio-project
+# Portfolio-Project
 
 ### A single page portfolio site. built with Html Sass and JavaScript.
 
