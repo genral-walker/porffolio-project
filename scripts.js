@@ -1,4 +1,8 @@
 
+// UPDATE YEAR
+const year = new Date().getFullYear();
+window.year.innerHTML = year;
+
 // ANIMATIONS FOR REST OF PAGE ON SCROLL
 AOS.init({
     offset: 400,
